@@ -22,25 +22,22 @@ Just download this repository and include the js file of your choice in the body
 
 ## Usage
 
-##### HTML - 
+### HTML - 
 
 Make a container for your carousel, and put all your image tags in there. Set whatever parameters you want in the data attributes, and you are done.
 
 ```html
-	<div id="carousel" data-ez-view-number=5 data-ez-autoscroll="on" data-ez-width="100%"
-	 data-ez-height="200px" data-ez-bg="#444" data-ez-arrow-color="white" 
-	 data-ez-arrow-size="3rem"
-	 data-ez-linked="true">
+	    <div id="carousel" data-ez-view-number=5 data-ez-autoscroll="on" data-ez-width="100%" data-ez-height="200px" data-ez-bg="#444" data-ez-arrow-color="white" data-ez-arrow-size="3rem" data-ez-linked="true">
 		<img src="...">
 		<img src="...">
 		.
 		.
 		.
-	</div>
+	    </div>
 ```
 
 <br><br>
-##### JavaScript-
+### JavaScript-
 
 Make a Carousel object using `new Carousel(<selector of the carousel container>);` and then call the object method `makeCarousel()` which does all the work for you.
 
@@ -85,7 +82,7 @@ If `data-ez-linked` is set to true then a data attribute `data-ez-href` will hav
 **eg -**
 
 ```html
-	<div id="carousel" data-ez-view-number=5 data-ez-autoscroll="on"
+    <div id="carousel" data-ez-view-number=5 data-ez-autoscroll="on"
 	 data-ez-width="100%" data-ez-height="200px" data-ez-bg="#444"
 	 data-ez-arrow-color="white" data-ez-arrow-size="10%" data-ez-linked="true">
         <img src="..." data-ez-href="...">
