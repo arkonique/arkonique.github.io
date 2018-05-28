@@ -105,7 +105,7 @@ As mentioned in the previous section, some options are in production which have 
 - [ ] CSS + JS based version of the library
 - [ ] CSS + Jquery based version of the library
 - [ ] Jquery based version of the library
-- [X] Auto Scroll Feature (In production)
+- [X] ~~Auto Scroll Feature~~
 - [ ] Linked Images (In production)
 - [ ] Support for all kinds of images
 - [ ] Option to change arrow type
