@@ -3,6 +3,8 @@
 
 
 Go to [the project repository](https://github.com/arkonique/arkonique.github.io)
+<br>
+View [Demo](demo)
 
 Easy Carousel is a very minimalistic carousel plugin built in pure Javascript. It is written mainy for a carousel which can display many brand logos and not for traditional image carousels. Although in a future update I might add a feature to use all kinds of images as well.
 
