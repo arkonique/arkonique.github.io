@@ -2,30 +2,104 @@
 <html>
 
 <head>
-    <title>Easy Carousel Plugin</title>
+    <title>Easy Carousel</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <style>
+    body>div {
+        width: 100%;
+        position: relative;
+        margin: 30px 0;
+    }
+
+    hr {
+        color: #95989a;
+        width: 60%;
+    }
+
+    .code {
+        font-family: monospace;
+        color: crimson;
+        background: lightgrey;
+        border-radius: 3px;
+        margin: 20px;
+        padding: 0 10px;
+    }
+
+    h1,p,h2{
+        padding: 0 20px
+    }
+
+    h1{
+        text-align: center;
+        color: crimson;
+    }
+    </style>
 </head>
 
-<body style="margin:0; display: flex; flex-wrap: wrap; align-items: center; background: cornflowerblue; height: 100vh;">
-    <div id="carousel" data-ez-view-number=5 data-ez-autoscroll="on" data-ez-width="100%" data-ez-height="200px" data-ez-bg="#444" data-ez-arrow-color="white" data-ez-arrow-size="3rem" data-ez-linked="true">
-        <img src="https://swachhcoin.com/img/001.png" data-ez-href="#">
-        <img src="https://swachhcoin.com/img/002.png" data-ez-href="#">
-        <img src="https://swachhcoin.com/img/003.png" data-ez-href="#">
-        <img src="https://swachhcoin.com/img/004.png" data-ez-href="#">
-        <img src="https://swachhcoin.com/img/006.png" data-ez-href="#">
-        <img src="https://swachhcoin.com/img/007.png" data-ez-href="#">
-        <img src="https://swachhcoin.com/img/009.png" data-ez-href="#">
-        <img src="https://swachhcoin.com/img/010.png" data-ez-href="#">
-        <img src="https://swachhcoin.com/img/011.png" data-ez-href="#">
-        <img src="https://swachhcoin.com/img/012.png" data-ez-href="#">
-        <img src="https://swachhcoin.com/img/013.png" data-ez-href="#">
-        <img src="https://swachhcoin.com/img/014.png" data-ez-href="#">
-        <img src="https://swachhcoin.com/img/015.png" data-ez-href="#">
+<body style="margin:0; display: flex; flex-wrap: wrap; align-items: center; background: #f5f5f5; height: 100vh; font-family: poppins">
+    <div>
+        <h1>Easy Carousel Demo</h1>
+        <h2>With Autoscroll on</h2>
+        <p>Parameters:<br><span class="code"> data-ez-view-number=5</span>
+            <br><span class="code"> data-ez-autoscroll="on"</span>
+            <br><span class="code"> data-ez-width="100%"</span>
+            <br><span class="code"> data-ez-height="300px"</span>
+            <br><span class="code"> data-ez-bg="#f55353" </span>
+            <br><span class="code"> data-ez-scroll-time=2000</span></p>
+        <div id="carousel" data-ez-view-number=5 data-ez-autoscroll="on" data-ez-width="100%" data-ez-height="300px" data-ez-bg="#f55353" data-ez-arrow-color="white" data-ez-arrow-size="3rem" data-ez-linked="true" data-ez-arrow-type="2" data-ez-scroll-time=2000>
+            <img src="https://swachhcoin.com/img/001.png" data-ez-href="#">
+            <img src="https://swachhcoin.com/img/002.png" data-ez-href="#">
+            <img src="https://swachhcoin.com/img/003.png" data-ez-href="#">
+            <img src="https://swachhcoin.com/img/004.png" data-ez-href="#">
+            <img src="https://swachhcoin.com/img/006.png" data-ez-href="#">
+            <img src="https://swachhcoin.com/img/007.png" data-ez-href="#">
+            <img src="https://swachhcoin.com/img/009.png" data-ez-href="#">
+            <img src="https://swachhcoin.com/img/010.png" data-ez-href="#">
+            <img src="https://swachhcoin.com/img/011.png" data-ez-href="#">
+            <img src="https://swachhcoin.com/img/012.png" data-ez-href="#">
+            <img src="https://swachhcoin.com/img/013.png" data-ez-href="#">
+            <img src="https://swachhcoin.com/img/014.png" data-ez-href="#">
+            <img src="https://swachhcoin.com/img/026.png" data-ez-href="#">
+            <img src="https://swachhcoin.com/img/021.png" data-ez-href="#">
+            <img src="https://swachhcoin.com/img/015.png" data-ez-href="#">
+        </div>
+    </div>
+    <hr>
+    <div>
+        <h2>With autoscroll off</h2>
+        <p>Parameters:<br><span class="code"> data-ez-view-number=5</span>
+            <br><span class="code"> data-ez-autoscroll="off"</span>
+            <br><span class="code"> data-ez-width="100%"</span>
+            <br><span class="code"> data-ez-height="250px"</span>
+            <br><span class="code"> data-ez-bg="lightseagreen" </span>
+            <br><span class="code"> data-ez-arrow-size="3rem" </span>
+            <br><span class="code"> data-ez-arrow-color="white"</span></p>
+        <div id="carousel2" data-ez-view-number=5 data-ez-autoscroll="off" data-ez-width="100%" data-ez-height="250px" data-ez-bg="lightseagreen" data-ez-arrow-color="white" data-ez-arrow-size="3rem" data-ez-linked="true" data-ez-arrow-type="2">
+            <img src="https://swachhcoin.com/img/001.png" data-ez-href="#">
+            <img src="https://swachhcoin.com/img/002.png" data-ez-href="#">
+            <img src="https://swachhcoin.com/img/003.png" data-ez-href="#">
+            <img src="https://swachhcoin.com/img/004.png" data-ez-href="#">
+            <img src="https://swachhcoin.com/img/006.png" data-ez-href="#">
+            <img src="https://swachhcoin.com/img/007.png" data-ez-href="#">
+            <img src="https://swachhcoin.com/img/009.png" data-ez-href="#">
+            <img src="https://swachhcoin.com/img/010.png" data-ez-href="#">
+            <img src="https://swachhcoin.com/img/011.png" data-ez-href="#">
+            <img src="https://swachhcoin.com/img/012.png" data-ez-href="#">
+            <img src="https://swachhcoin.com/img/013.png" data-ez-href="#">
+            <img src="https://swachhcoin.com/img/014.png" data-ez-href="#">
+            <img src="https://swachhcoin.com/img/026.png" data-ez-href="#">
+            <img src="https://swachhcoin.com/img/021.png" data-ez-href="#">
+            <img src="https://swachhcoin.com/img/015.png" data-ez-href="#">
+        </div>
     </div>
 </body>
 <script type="text/javascript" src="../js/easy-carousel.min.js"></script>
 <script type="text/javascript">
 const carousel = new Carousel("#carousel");
 carousel.makeCarousel();
+
+const carousel2 = new Carousel("#carousel2");
+carousel2.makeCarousel();
 </script>
 
 </html>

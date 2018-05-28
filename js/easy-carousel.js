@@ -1,3 +1,24 @@
+/*****************************************************************************************************
+ * _______				   _____,							  .__ 									 *
+ * |  ____|                 / ____|                             | |									 *
+ * | |__   __ _ ___ _   _  | |     __ _ _ __ ___  _   _ ___  ___| |         						 *
+ * |  __| / _` / __| | | | | |    / _` | '__/ _ \| | | / __|/ _ \ |									 *
+ * | |___| (_| \__ \ |_| | | |___| (_| | | | (_) | |_| \__ \  __/ |									 *
+ * |______\__,_|___/\__, |  \_____\__,_|_|  \___/ \__,_|___/\___|_|									 *
+ *                   __/ |                                         									 *
+ *                  |___/                                          									 *
+ *																									 *
+ * ######          ######                             #     #                                    	 *
+ * #     # #   #   #     # # #####  #####  #    # #   ##   ##   ##   #    # #####    ##   #      	 *
+ * #     #  # #    #     # # #    # #    # #    # #   # # # #  #  #  ##   # #    #  #  #  #      	 *
+ * ######    #     ######  # #    # #    # ###### #   #  #  # #    # # #  # #    # #    # #      	 *
+ * #     #   #     #   #   # #    # #    # #    # #   #     # ###### #  # # #    # ###### #      	 *
+ * #     #   #     #    #  # #    # #    # #    # #   #     # #    # #   ## #    # #    # #      	 *
+ * ######    #     #     # # #####  #####  #    # #   #     # #    # #    # #####  #    # ###### 	 *
+ *                                                                                              	 *
+ *****************************************************************************************************/
+let interval;
+
 class Carousel {
     constructor(selector = "#carousel") {
         const number = 5;
@@ -7,7 +28,9 @@ class Carousel {
         const bgcolor = "white";
         const arrowcolor = "black";
         const arrowsize = "2rem";
+        const arrowtype = 1;
         const linked = "false";
+        const scrolltime = 5000;
         this.selector = document.querySelector(selector);
         this.number = (this.selector.dataset.ezViewNumber == undefined) ? number : this.selector.dataset.ezViewNumber;
         this.autoScroll = (this.selector.dataset.ezAutoscroll == undefined) ? autoscroll : this.selector.dataset.ezAutoscroll;
@@ -17,6 +40,9 @@ class Carousel {
         this.bgColor = (this.selector.dataset.ezBg == undefined) ? bgcolor : this.selector.dataset.ezBg;
         this.arrowSize = (this.selector.dataset.ezArrowSize == undefined) ? arrowsize : this.selector.dataset.ezArrowSize;
         this.linked = (this.selector.dataset.ezLinked == undefined) ? linked : this.selector.dataset.ezLinked;
+        this.arrowType = (this.selector.dataset.ezArrowType == undefined) ? arrowtype : this.selector.dataset.ezArrowType;
+        this.identifier = selector;
+        this.scrollTime = (this.selector.dataset.ezScrollTime == undefined) ? scrolltime : this.selector.dataset.ezScrollTime;
 
     }
     makeCarousel() {
@@ -71,7 +97,7 @@ class Carousel {
             let heightNum = height;
             height = height + "px";
             let margin = (this.selector.getBoundingClientRect().height / 10) + "px";
-            let width = (((this.selector.getBoundingClientRect().width - document.getElementsByClassName('next')[0].getBoundingClientRect().width - document.getElementsByClassName('previous')[0].getBoundingClientRect().width) / this.number) - 2 * (this.selector.getBoundingClientRect().height / 10)) + "px";
+            let width = (((this.selector.getBoundingClientRect().width - document.querySelectorAll(`${this.identifier} .next`)[0].getBoundingClientRect().width - document.querySelectorAll(`${this.identifier} .previous`)[0].getBoundingClientRect().width) / this.number) - 2 * (this.selector.getBoundingClientRect().height / 10)) + "px";
             i.setAttribute('style', `height: ${height}; width: ${width}; margin: ${margin}; display: flex; align-items: center; justify-content: center;  transition: 0.5s;`);
             i.childNodes[0].style.width = width;
             i.childNodes[0].style.height = (0.8 * heightNum) + "px";
@@ -103,18 +129,22 @@ class Carousel {
         //---------------------------------------------Styling complete!!!!!------------------------------->
 
         this.carouselActions();
+        if (this.autoScroll == "on") {
+            this.autoScroller();
+        }
 
     }
 
     carouselActions() {
-        let bg, selector, total, current, target, translate;
+        let bg, selector, total, current, target, translate, identifier;
         current = 1;
         translate = 0;
         selector = this.selector;
+        identifier = this.identifier;
         total = Math.ceil(this.selector.childNodes[1].childNodes.length / this.number);
         console.log(selector);
-        document.querySelector(".selected").style.background = 'transparent';
-        for (let i of document.querySelectorAll(".carousel-button-blob")) {
+        document.querySelector(`${this.identifier} .selected`).style.background = 'transparent';
+        for (let i of document.querySelectorAll(`${identifier} .carousel-button-blob`)) {
             if ([...i.classList].indexOf("selected") == -1) {
                 bg = i.style.background;
                 break;
@@ -122,7 +152,7 @@ class Carousel {
         }
 
         //-----------------Carousel blob buttons actions-------------------->
-        for (let i of document.querySelectorAll(".carousel-button-blob")) {
+        for (let i of document.querySelectorAll(`${identifier} .carousel-button-blob`)) {
             i.onmouseover = function() {
                 i.style.background = "transparent";
             }
@@ -134,115 +164,190 @@ class Carousel {
             }
 
             i.onclick = function() {
-                for (let j of document.querySelectorAll(".carousel-button-blob")) {
+                for (let j of document.querySelectorAll(`${identifier} .carousel-button-blob`)) {
                     if ([...j.classList].indexOf("selected") != -1) {
                         current = j.id.slice(-1 * (j.id.length - 7))
                     }
                 }
-                for (let j of document.querySelectorAll(".carousel-button-blob")) {
+                for (let j of document.querySelectorAll(`${identifier} .carousel-button-blob`)) {
                     if ([...j.classList].indexOf("selected") != -1) {
                         j.classList.remove("selected");
                     }
                 }
                 this.classList.add("selected");
-                for (let j of document.querySelectorAll(".carousel-button-blob")) {
+                for (let j of document.querySelectorAll(`${identifier} .carousel-button-blob`)) {
                     if ([...j.classList].indexOf("selected") == -1) {
                         j.style.background = bg;
                     }
                 }
                 target = i.id.slice(-1 * (i.id.length - 7))
-                let width = (selector.getBoundingClientRect().width - document.getElementsByClassName('next')[0].getBoundingClientRect().width - document.getElementsByClassName('previous')[0].getBoundingClientRect().width);
+                let width = (selector.getBoundingClientRect().width - document.querySelectorAll(`${identifier} .next`)[0].getBoundingClientRect().width - document.querySelectorAll(`${identifier} .previous`)[0].getBoundingClientRect().width);
                 let gap = current - target;
                 for (let j of selector.childNodes[1].childNodes) {
                     j.style.transform = `translateX(${translate+gap*width}px)`;
                 }
-                translate = translate+gap*width;
+                translate = translate + gap * width;
             }
 
         }
 
         //-----------------Previous and next button actions----------------->
-        document.querySelector(".previous").onclick = function(){
-        	let id;
-        	for (let [j,i] of document.querySelectorAll(".carousel-button-blob").entries()){
-        		if ([...i.classList].indexOf("selected") != -1){
-        			id = i.id;
-        			i.classList.remove("selected");
-        			var a = (j==0)? i.classList.add("selected") : document.querySelectorAll(".carousel-button-blob")[j-1].classList.add("selected");
-        			break;
-        		}
-        	}
-        	let width = (selector.getBoundingClientRect().width - document.getElementsByClassName('next')[0].getBoundingClientRect().width - document.getElementsByClassName('previous')[0].getBoundingClientRect().width);
-        	if (id == "ez-cbb-1"){
-        		translate = -1*(total-1)*width;
-        		for (let j of selector.childNodes[1].childNodes){
-        			j.style.transform = `translateX(${translate}px)`;
-        		}
-        		document.querySelectorAll(".carousel-button-blob")[0].classList.remove("selected");
-        		document.querySelectorAll(".carousel-button-blob")[total-1].classList.add("selected");
-
-        	}
-
-        	else{
-        		
-
-        		for (let j of selector.childNodes[1].childNodes){
-        			j.style.transform = `translateX(${translate+width}px)`;
-        		}
-        		translate=translate+width;
-
-        	}
-
-        	for (let i of document.querySelectorAll('.carousel-button-blob')){
-        		if ([...i.classList].indexOf("selected")==-1){
-        			i.style.background = bg;
-        		}
-        		else{
-        			i.style.background = "transparent";
-        		}
-        	}
-        }
-
-        document.querySelector(".next").onclick = function(){
-        	let id;
-            for ( let [j,i] of document.querySelectorAll('.carousel-button-blob').entries() ){
-                if( [...i.classList].indexOf("selected") != -1 ){
+        document.querySelector(`${identifier} .previous`).onclick = function() {
+            let id;
+            for (let [j, i] of document.querySelectorAll(`${identifier} .carousel-button-blob`).entries()) {
+                if ([...i.classList].indexOf("selected") != -1) {
                     id = i.id;
                     i.classList.remove("selected");
-                    var a = (j==(total-1))? i.classList.add("selected") : document.querySelectorAll(".carousel-button-blob")[j+1].classList.add("selected");
+                    var a = (j == 0) ? i.classList.add("selected") : document.querySelectorAll(`${identifier} .carousel-button-blob`)[j - 1].classList.add("selected");
                     break;
                 }
             }
-            let width = (selector.getBoundingClientRect().width - document.getElementsByClassName('next')[0].getBoundingClientRect().width - document.getElementsByClassName('previous')[0].getBoundingClientRect().width);
-
-            if( id==`ez-cbb-${total}` ){
-                translate = 0;
-                for (let j of selector.childNodes[1].childNodes){
+            let width = (selector.getBoundingClientRect().width - document.querySelectorAll(`${identifier} .next`)[0].getBoundingClientRect().width - document.querySelectorAll(`${identifier} .previous`)[0].getBoundingClientRect().width);
+            if (id == "ez-cbb-1") {
+                translate = -1 * (total - 1) * width;
+                for (let j of selector.childNodes[1].childNodes) {
                     j.style.transform = `translateX(${translate}px)`;
                 }
+                document.querySelectorAll(`${identifier} .carousel-button-blob`)[0].classList.remove("selected");
+                document.querySelectorAll(`${identifier} .carousel-button-blob`)[total - 1].classList.add("selected");
 
-                document.querySelectorAll(".carousel-button-blob")[0].classList.add("selected");
-                document.querySelectorAll(".carousel-button-blob")[total-1].classList.remove("selected");
+            } else {
+
+
+                for (let j of selector.childNodes[1].childNodes) {
+                    j.style.transform = `translateX(${translate+width}px)`;
+                }
+                translate = translate + width;
 
             }
 
-            else{
-                translate = translate - width;
-                for (let j of selector.childNodes[1].childNodes){
-                    j.style.transform = `translateX(${translate}px)`;
-                }
-            }
-
-            for (let i of document.querySelectorAll('.carousel-button-blob')){
-                if ([...i.classList].indexOf("selected")==-1){
+            for (let i of document.querySelectorAll(`${identifier} .carousel-button-blob`)) {
+                if ([...i.classList].indexOf("selected") == -1) {
                     i.style.background = bg;
-                }
-                else{
+                } else {
                     i.style.background = "transparent";
                 }
             }
         }
 
+        document.querySelector(`${identifier} .next`).onclick = function() {
+            let id;
+            for (let [j, i] of document.querySelectorAll(`${identifier} .carousel-button-blob`).entries()) {
+                if ([...i.classList].indexOf("selected") != -1) {
+                    id = i.id;
+                    i.classList.remove("selected");
+                    var a = (j == (total - 1)) ? i.classList.add("selected") : document.querySelectorAll(`${identifier} .carousel-button-blob`)[j + 1].classList.add("selected");
+                    break;
+                }
+            }
+            let width = (selector.getBoundingClientRect().width - document.querySelectorAll(`${identifier} .next`)[0].getBoundingClientRect().width - document.querySelectorAll(`${identifier} .previous`)[0].getBoundingClientRect().width);
+
+            if (id == `ez-cbb-${total}`) {
+                translate = 0;
+                for (let j of selector.childNodes[1].childNodes) {
+                    j.style.transform = `translateX(${translate}px)`;
+                }
+
+                document.querySelectorAll(`${identifier} .carousel-button-blob`)[0].classList.add("selected");
+                document.querySelectorAll(`${identifier} .carousel-button-blob`)[total - 1].classList.remove("selected");
+
+            } else {
+                translate = translate - width;
+                for (let j of selector.childNodes[1].childNodes) {
+                    j.style.transform = `translateX(${translate}px)`;
+                }
+            }
+
+            for (let i of document.querySelectorAll(`${identifier} .carousel-button-blob`)) {
+                if ([...i.classList].indexOf("selected") == -1) {
+                    i.style.background = bg;
+                } else {
+                    i.style.background = "transparent";
+                }
+            }
+        }
+
+    }
+
+    autoScroller() {
+    	for (let i of document.querySelectorAll(`${this.identifier} .carousel-button-blob`)) {
+    		i.onclick = function(){};
+    	}
+
+        let e = this;
+        e.selector.childNodes[0].innerHTML = e.selector.childNodes[2].innerHTML = "";
+        e.selector.childNodes[0].style.width = e.selector.childNodes[2].style.width = "0";
+        const rotate = this.selector.childNodes[1];
+        rotate.style.display = "flex";
+        rotate.style.height = "90%";
+        rotate.style.width = "100%";
+        rotate.style.position = "relative";
+        rotate.style.overflow = "hidden";
+        //Styling all the image containing divs and images in the rotater
+        for (let i of this.selector.childNodes[1].childNodes) {
+            let height = this.selector.getBoundingClientRect().height * 0.8;
+            let heightNum = height;
+            height = height + "px";
+            let margin = (this.selector.getBoundingClientRect().height / 10) + "px";
+            let width = (((this.selector.getBoundingClientRect().width - document.querySelectorAll(`${this.identifier} .next`)[0].getBoundingClientRect().width - document.querySelectorAll(`${this.identifier} .previous`)[0].getBoundingClientRect().width) / this.number) - 2 * (this.selector.getBoundingClientRect().height / 10)) + "px";
+            i.setAttribute('style', `height: ${height}; width: ${width}; margin: ${margin}; display: flex; align-items: center; justify-content: center;  transition: 0.5s;`);
+            i.childNodes[0].style.width = width;
+            i.childNodes[0].style.height = (0.8 * heightNum) + "px";
+            i.childNodes[0].style.margin = "auto";
+        }
+
+        for (let i of document.querySelectorAll(`${this.identifier} .carousel-button-blob`)){
+        	i.style.cursor = "default";
+        }
+
+
+
+        let identifier = e.identifier;
+        let id;
+        let translate = 0;
+        let bg;
+        let width = (e.selector.getBoundingClientRect().width - document.querySelectorAll(`${identifier} .next`)[0].getBoundingClientRect().width - document.querySelectorAll(`${identifier} .previous`)[0].getBoundingClientRect().width);
+        let total = Math.ceil(e.selector.childNodes[1].childNodes.length / this.number);
+        document.body.onload = function() {
+            interval = setInterval(function() {
+                for (let i of document.querySelectorAll(`${identifier} .carousel-button-blob`)) {
+                    if ([...i.classList].indexOf("selected") == -1) {
+                        bg = i.style.background;
+                        break;
+                    }
+                }
+                for (let [j, i] of document.querySelectorAll(`${identifier} .carousel-button-blob`).entries()) {
+                    if ([...i.classList].indexOf('selected') != -1) {
+                        id = i.id;
+                        i.classList.remove('selected');
+                        var a = (j == (total - 1)) ? i.classList.add('selected') : document.querySelectorAll(`${identifier} .carousel-button-blob`)[j + 1].classList.add('selected');
+                        break;
+                    }
+                }
+
+                if (id == `ez-cbb-${total}`) {
+                    translate = 0;
+                    for (let i of e.selector.childNodes[1].childNodes) {
+                        i.style.transform = `translateX(${translate}px)`;
+                    }
+                    document.querySelectorAll(`${identifier} .carousel-button-blob`)[0].classList.add("selected");
+                    document.querySelectorAll(`${identifier} .carousel-button-blob`)[total - 1].classList.remove("selected");
+                } else {
+                    translate = translate - width;
+                    for (let i of e.selector.childNodes[1].childNodes) {
+                        i.style.transform = `translateX(${translate}px)`;
+                    }
+                }
+
+                for (let i of document.querySelectorAll(`${identifier} .carousel-button-blob`)) {
+                    if ([...i.classList].indexOf("selected") == -1) {
+                        i.style.background = bg;
+                    } else {
+                        i.style.background = "transparent";
+                    }
+                }
+            }, e.scrollTime)
+        }
     }
 
 }

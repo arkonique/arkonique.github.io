@@ -5,7 +5,7 @@
 Go to [the project homepage](https://arkonique.github.io)<br>
 View [demo](https://arkonique.github.io/demo)
 
-Easy Carousel is a very minimalistic carousel plugin built in pure Javascript. It is written mainy for a carousel which can display many brand logos and not for traditional image carousels. Although in a future update I might add a feature to use all kinds of images as well.
+Easy Carousel is a very minimalistic lightweight carousel plugin built in pure Javascript. It is written mainy for a carousel which can display many brand logos and not for traditional image carousels. Although in a future update I might add a feature to use all kinds of images as well. However at a minified size of just 7kb, it is one of the lightest ones out there.
 
 Both es5 and es6 versions are provided in this package.
 
@@ -73,7 +73,7 @@ There are many options provided to customise your carousel. More features will b
 | `data-ez-bg`           | Specify the background colour of the carousel                              | white      | Any CSS color type |
 
 
-More options are there is the source code that have not been implemented yet. And more will be added later. Those currently in production are - 
+More options are there in the source code that have not been implemented yet. And more will be added later. Those currently in production are - 
 
 | Data attribute         | Usage                                                                      | Default    | Input              |
 | ---------------------- |:--------------------------------------------------------------------------:|:----------:|:------------------:|
@@ -104,7 +104,7 @@ As mentioned in the previous section, some options are in production which have 
 - [ ] CSS + JS based version of the library
 - [ ] CSS + Jquery based version of the library
 - [ ] Jquery based version of the library
-- [ ] Auto Scroll Feature (In production)
+- [X] Auto Scroll Feature (In production)
 - [ ] Linked Images (In production)
 - [ ] Support for all kinds of images
 - [ ] Option to change arrow type
