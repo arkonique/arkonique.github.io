@@ -109,4 +109,5 @@ As mentioned in the previous section, some options are in production which have 
 - [ ] Auto Scroll Feature (In production)
 - [ ] Linked Images (In production)
 - [ ] Support for all kinds of images
+- [ ] Option to change arrow type
 - [X] ~~ES5 support~~
