@@ -70,15 +70,16 @@ There are many options provided to customise your carousel. More features will b
 | `data-ez-height`       | Specify the height of the carousel output                                  | 200px      | Any CSS size unit  |
 | `data-ez-arrow-color`  | Specify the colour of the controller buttons                               | black      | Any CSS color type |
 | `data-ez-arrow-size`   | Specify the size of the controller arrows                                  | 2rem       | Any CSS size unit  |
-| `data-ez-bg`           | Specify the background colour of the carousel                              | white      | Any CSS color type |
+| `data-ez-bg`           | Specify the background colour of the carousel                              | white      | Any CSS color type 
+| `data-ez-autoscroll`   | Specify whether the carousel will scroll through the list automatically    | off        | off/on             
+| `data-ez-scroll-time`  | Specify the time interval for a slide change								  | 5000	   | Time in miliseconds
 
 
 More options are there in the source code that have not been implemented yet. And more will be added later. Those currently in production are - 
 
 | Data attribute         | Usage                                                                      | Default    | Input              |
 | ---------------------- |:--------------------------------------------------------------------------:|:----------:|:------------------:|
-| `data-ez-autoscroll`   | Specify whether the carousel will scroll through the list automatically    | off        | off/on             |
-| `data-ez-linked`       | Specify whether the images being displayed will have links to some website | false      | true/false         |
+| `data-ez-linked`       | Specify whether the images being displayed will have links to some website | false      | true/false         
 
 If `data-ez-linked` is set to true then a data attribute `data-ez-href` will have to be added to all the images in the carousel which will contain the link of the webpage that the image is linked to.
 

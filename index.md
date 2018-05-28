@@ -24,15 +24,14 @@ Just download this repository and include the js file of your choice in the body
 
 ## Usage
 
-##### HTML - 
+### HTML - 
 
 Make a container for your carousel, and put all your image tags in there. Set whatever parameters you want in the data attributes, and you are done.
 
 ```html
-	<div id="carousel" data-ez-view-number=5 data-ez-autoscroll="on" data-ez-width="100%"
-	 data-ez-height="200px" data-ez-bg="#444" data-ez-arrow-color="white" 
-	 data-ez-arrow-size="3rem"
-	 data-ez-linked="true">
+	<div id="carousel" data-ez-view-number=5 data-ez-autoscroll="on" 
+	 data-ez-width="100%" data-ez-height="200px" data-ez-bg="#444"
+	 data-ez-arrow-color="white" data-ez-arrow-size="3rem" data-ez-linked="true">
 		<img src="...">
 		<img src="...">
 		.
@@ -42,7 +41,7 @@ Make a container for your carousel, and put all your image tags in there. Set wh
 ```
 
 <br><br>
-##### JavaScript-
+### JavaScript-
 
 Make a Carousel object using `new Carousel(<selector of the carousel container>);` and then call the object method `makeCarousel()` which does all the work for you.
 
@@ -50,7 +49,7 @@ Make a Carousel object using `new Carousel(<selector of the carousel container>)
 	const carousel = new Carousel("#carousel");
 	carousel.makeCarousel();
 ```
-(You can replace the const with var if you want support for older browsers and are not using a transpiler such as babel).
+(You can replace the const with var if you want support for older browsers and are not using atranspiler such as Babel).
 
 The Carousel constructor takes default "#carousel" as the selector. So if you have named your carousel container with an id of `carousel`, then you can just initialise the carousel by -
 
@@ -72,15 +71,16 @@ There are many options provided to customise your carousel. More features will b
 | `data-ez-height`       | Specify the height of the carousel output                                  | 200px      | Any CSS size unit  |
 | `data-ez-arrow-color`  | Specify the colour of the controller buttons                               | black      | Any CSS color type |
 | `data-ez-arrow-size`   | Specify the size of the controller arrows                                  | 2rem       | Any CSS size unit  |
-| `data-ez-bg`           | Specify the background colour of the carousel                              | white      | Any CSS color type |
+| `data-ez-bg`           | Specify the background colour of the carousel                              | white      | Any CSS color type 
+| `data-ez-autoscroll`   | Specify whether the carousel will scroll through the list automatically    | off        | off/on             
+| `data-ez-scroll-time`  | Specify the time interval for a slide change								  | 5000	   | Time in miliseconds
 
 
 More options are there in the source code that have not been implemented yet. And more will be added later. Those currently in production are - 
 
 | Data attribute         | Usage                                                                      | Default    | Input              |
 | ---------------------- |:--------------------------------------------------------------------------:|:----------:|:------------------:|
-| `data-ez-autoscroll`   | Specify whether the carousel will scroll through the list automatically    | off        | off/on             |
-| `data-ez-linked`       | Specify whether the images being displayed will have links to some website | false      | true/false         |
+| `data-ez-linked`       | Specify whether the images being displayed will have links to some website | false      | true/false         
 
 If `data-ez-linked` is set to true then a data attribute `data-ez-href` will have to be added to all the images in the carousel which will contain the link of the webpage that the image is linked to.
 
@@ -106,7 +106,7 @@ As mentioned in the previous section, some options are in production which have 
 - [ ] CSS + JS based version of the library
 - [ ] CSS + Jquery based version of the library
 - [ ] Jquery based version of the library
-- [X] Auto Scroll Feature
+- [X] Auto Scroll Feature (In production)
 - [ ] Linked Images (In production)
 - [ ] Support for all kinds of images
 - [ ] Option to change arrow type
