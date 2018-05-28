@@ -45,7 +45,7 @@ Make a Carousel object using `new Carousel(<selector of the carousel container>)
 	const carousel = new Carousel("#carousel");
 	carousel.makeCarousel();
 ```
-(You can replace the const with var if you want support for older browsers and are not using babel).
+(You can replace the const with var if you want support for older browsers and are not using atranspiler such as Babel).
 
 The Carousel constructor takes default "#carousel" as the selector. So if you have named your carousel container with an id of `carousel`, then you can just initialise the carousel by -
 
