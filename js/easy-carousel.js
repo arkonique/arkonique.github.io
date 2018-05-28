@@ -43,6 +43,40 @@ class Carousel {
         this.arrowType = (this.selector.dataset.ezArrowType == undefined) ? arrowtype : this.selector.dataset.ezArrowType;
         this.identifier = selector;
         this.scrollTime = (this.selector.dataset.ezScrollTime == undefined) ? scrolltime : this.selector.dataset.ezScrollTime;
+        if (this.arrowType == 1) {
+            this.arrowSymbol_l = "&larr;";
+            this.arrowSymbol_r = "&rarr;";
+        } else if (this.arrowType == 2) {
+            this.arrowSymbol_l = "&#8672;";
+            this.arrowSymbol_r = "&#8674;";
+        } else if (this.arrowType == 3) {
+            this.arrowSymbol_l = "&lsaquo;";
+            this.arrowSymbol_r = "&rsaquo;";
+        } else if (this.arrowType == 4) {
+            this.arrowSymbol_l = "&laquo;";
+            this.arrowSymbol_r = "&raquo;";
+        } else if (this.arrowType == 5) {
+            this.arrowSymbol_l = "&lArr;";
+            this.arrowSymbol_r = "&rArr;";
+        } else if (this.arrowType == 6) {
+            this.arrowSymbol_l = "&#8668;";
+            this.arrowSymbol_r = "&zigrarr;";
+        } else if (this.arrowType == 7) {
+            this.arrowSymbol_l = "&#8678;";
+            this.arrowSymbol_r = "&#8680;";
+        } else if (this.arrowType == 8) {
+            this.arrowSymbol_l = "&loarr;";
+            this.arrowSymbol_r = "&roarr;";
+        } else if (this.arrowType == 9) {
+            this.arrowSymbol_l = "&pr;";
+            this.arrowSymbol_r = "&sc;";
+        } else if (this.arrowType == 10) {
+            this.arrowSymbol_l = "&#10096;";
+            this.arrowSymbol_r = "&#10097;";
+        } else {
+            this.arrowSymbol_l = "&#8672;";
+            this.arrowSymbol_r = "&#8674;";
+        }
 
     }
     makeCarousel() {
@@ -51,14 +85,14 @@ class Carousel {
 
         //Generating New HTML
         let srcList = [];
-        let str = "<div class='previous'><p>&#8672;</p></div><div class='rotater'>";
+        let str = `<div class='previous'><p>${this.arrowSymbol_l}</p></div><div class='rotater'>`;
         let src;
         for (let i of this.selector.children) {
             src = i.getAttribute("src");
             srcList.push(src);
             str = `${str}<div class='carousel-img-holder'><img src=${src} class='carousel-img' /></div>`;
         }
-        str = `${str}</div><div class='next'><p>&#8674;</p></div><div class="carousel-buttons"></div>`;
+        str = `${str}</div><div class='next'><p>${this.arrowSymbol_r}</p></div><div class="carousel-buttons"></div>`;
         this.selector.innerHTML = str;
 
         //-------------------------------------------> Styling Elements
@@ -270,9 +304,9 @@ class Carousel {
     }
 
     autoScroller() {
-    	for (let i of document.querySelectorAll(`${this.identifier} .carousel-button-blob`)) {
-    		i.onclick = function(){};
-    	}
+        for (let i of document.querySelectorAll(`${this.identifier} .carousel-button-blob`)) {
+            i.onclick = function() {};
+        }
 
         let e = this;
         e.selector.childNodes[0].innerHTML = e.selector.childNodes[2].innerHTML = "";
@@ -296,8 +330,8 @@ class Carousel {
             i.childNodes[0].style.margin = "auto";
         }
 
-        for (let i of document.querySelectorAll(`${this.identifier} .carousel-button-blob`)){
-        	i.style.cursor = "default";
+        for (let i of document.querySelectorAll(`${this.identifier} .carousel-button-blob`)) {
+            i.style.cursor = "default";
         }
 
 

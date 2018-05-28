@@ -64,16 +64,29 @@ __*That is all you need to get going*__
 
 There are many options provided to customise your carousel. More features will be added later on. You can change these options by setting their values in the data attributes of your carousel element.
 
-| Data Attribute         | Usage                                                                      | Default    | Input              |
-| ---------------------- |:--------------------------------------------------------------------------:|:----------:|:------------------:|
-| `data-ez-view-number`  | Specify the number of images to display on one slide of the carousel       | 5          | Integer            |
-| `data-ez-width`        | Specify the width of the carousel output                                   | 100%       | Any CSS Size Unit  |
-| `data-ez-height`       | Specify the height of the carousel output                                  | 200px      | Any CSS size unit  |
-| `data-ez-arrow-color`  | Specify the colour of the controller buttons                               | black      | Any CSS color type |
-| `data-ez-arrow-size`   | Specify the size of the controller arrows                                  | 2rem       | Any CSS size unit  |
-| `data-ez-bg`           | Specify the background colour of the carousel                              | white      | Any CSS color type 
-| `data-ez-autoscroll`   | Specify whether the carousel will scroll through the list automatically    | off        | off/on             
-| `data-ez-scroll-time`  | Specify the time interval for a slide change								  | 5000	   | Time in miliseconds
+| Data Attribute         | Usage                                                                                 | Default    | Input              |
+| ---------------------- |:-------------------------------------------------------------------------------------:|:----------:|:------------------:|
+| `data-ez-view-number`  | Specify the number of images to display on one slide of the carousel                  | 5          | Integer            |
+| `data-ez-width`        | Specify the width of the carousel output                                              | 100%       | Any CSS Size Unit  |
+| `data-ez-height`       | Specify the height of the carousel output                                             | 200px      | Any CSS size unit  |
+| `data-ez-arrow-color`  | Specify the colour of the controller buttons                                          | black      | Any CSS color type |
+| `data-ez-arrow-size`   | Specify the size of the controller arrows                                             | 2rem       | Any CSS size unit  |
+| `data-ez-bg`           | Specify the background colour of the carousel                                         | white      | Any CSS color type |
+| `data-ez-autoscroll`   | Specify whether the carousel will scroll through the list automatically               | off        | off/on             | 
+| `data-ez-scroll-time`  | Specify the time interval for a slide change								             | 5000	      | Time in miliseconds|
+| `data-ez-arrow-type`   | Specify the type of arrow to be used in the buttons (different types are listed below)| 1		  | any number in 1-10 |
+
+**Arrow Types**
+1. Basic Arrow - `data-ez-arrow-type=1` &larr; &rarr;  (Default)
+2. Dotted arrow - `data-ez-arrow-type=2` &#8672; &#8674;
+3. Small single angle arrow - `data-ez-arrow-type=3` &lsaquo; &rsaquo;
+4. Small double angle arrow - `data-ez-arrow-type=4` &laquo; &raquo;
+5. Big double dashed arrow open - `data-ez-arrow-type=5` &lArr; &rArr;
+6. Zigzag arrow - `data-ez-arrow-type=6` &#8668; &zigrarr;
+7. Big double dashed arrow closed - `data-ez-arrow-type=7` &#8678; &#8680;
+8. Open headed arrow - `data-ez-arrow-type=8` &loarr; &roarr;
+9. Curved arrow - `data-ez-arrow-type=9` &pr; &sc;
+10. Big single angle arrow - `data-ez-arrow-type=10` &#10096; &#10097;
 
 
 More options are there in the source code that have not been implemented yet. And more will be added later. Those currently in production are - 
@@ -106,8 +119,8 @@ As mentioned in the previous section, some options are in production which have 
 - [ ] CSS + JS based version of the library
 - [ ] CSS + Jquery based version of the library
 - [ ] Jquery based version of the library
-- [X] Auto Scroll Feature (In production)
+- [X] ~~Auto Scroll Feature~~
 - [ ] Linked Images (In production)
 - [ ] Support for all kinds of images
-- [ ] Option to change arrow type
+- [X] ~~Option to change arrow type~~
 - [X] ~~ES5 support~~

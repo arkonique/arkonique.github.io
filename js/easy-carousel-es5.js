@@ -15,7 +15,7 @@ var Carousel = function () {
 
     _classCallCheck(this, Carousel);
 
-    this.selector = document.querySelector(e), this.number = null == this.selector.dataset.ezViewNumber ? 5 : this.selector.dataset.ezViewNumber, this.autoScroll = null == this.selector.dataset.ezAutoscroll ? "off" : this.selector.dataset.ezAutoscroll, this.width = null == this.selector.dataset.ezWidth ? "100%" : this.selector.dataset.ezWidth, this.height = null == this.selector.dataset.ezHeight ? "200px" : this.selector.dataset.ezHeight, this.arrowColor = null == this.selector.dataset.ezArrowColor ? "black" : this.selector.dataset.ezArrowColor, this.bgColor = null == this.selector.dataset.ezBg ? "white" : this.selector.dataset.ezBg, this.arrowSize = null == this.selector.dataset.ezArrowSize ? "2rem" : this.selector.dataset.ezArrowSize, this.linked = null == this.selector.dataset.ezLinked ? "false" : this.selector.dataset.ezLinked, this.arrowType = null == this.selector.dataset.ezArrowType ? 1 : this.selector.dataset.ezArrowType, this.identifier = e, this.scrollTime = null == this.selector.dataset.ezScrollTime ? 5e3 : this.selector.dataset.ezScrollTime;
+    this.selector = document.querySelector(e), this.number = null == this.selector.dataset.ezViewNumber ? 5 : this.selector.dataset.ezViewNumber, this.autoScroll = null == this.selector.dataset.ezAutoscroll ? "off" : this.selector.dataset.ezAutoscroll, this.width = null == this.selector.dataset.ezWidth ? "100%" : this.selector.dataset.ezWidth, this.height = null == this.selector.dataset.ezHeight ? "200px" : this.selector.dataset.ezHeight, this.arrowColor = null == this.selector.dataset.ezArrowColor ? "black" : this.selector.dataset.ezArrowColor, this.bgColor = null == this.selector.dataset.ezBg ? "white" : this.selector.dataset.ezBg, this.arrowSize = null == this.selector.dataset.ezArrowSize ? "2rem" : this.selector.dataset.ezArrowSize, this.linked = null == this.selector.dataset.ezLinked ? "false" : this.selector.dataset.ezLinked, this.arrowType = null == this.selector.dataset.ezArrowType ? 1 : this.selector.dataset.ezArrowType, this.identifier = e, this.scrollTime = null == this.selector.dataset.ezScrollTime ? 5e3 : this.selector.dataset.ezScrollTime, 1 == this.arrowType ? (this.arrowSymbol_l = "&larr;", this.arrowSymbol_r = "&rarr;") : 2 == this.arrowType ? (this.arrowSymbol_l = "&#8672;", this.arrowSymbol_r = "&#8674;") : 3 == this.arrowType ? (this.arrowSymbol_l = "&lsaquo;", this.arrowSymbol_r = "&rsaquo;") : 4 == this.arrowType ? (this.arrowSymbol_l = "&laquo;", this.arrowSymbol_r = "&raquo;") : 5 == this.arrowType ? (this.arrowSymbol_l = "&lArr;", this.arrowSymbol_r = "&rArr;") : 6 == this.arrowType ? (this.arrowSymbol_l = "&#8668;", this.arrowSymbol_r = "&zigrarr;") : 7 == this.arrowType ? (this.arrowSymbol_l = "&#8678;", this.arrowSymbol_r = "&#8680;") : 8 == this.arrowType ? (this.arrowSymbol_l = "&loarr;", this.arrowSymbol_r = "&roarr;") : 9 == this.arrowType ? (this.arrowSymbol_l = "&pr;", this.arrowSymbol_r = "&sc;") : 10 == this.arrowType ? (this.arrowSymbol_l = "&#10096;", this.arrowSymbol_r = "&#10097;") : (this.arrowSymbol_l = "&#8672;", this.arrowSymbol_r = "&#8674;");
   }
 
   _createClass(Carousel, [{
@@ -23,14 +23,14 @@ var Carousel = function () {
     value: function makeCarousel() {
       var e = void 0,
           t = [],
-          l = "<div class='previous'><p>&#8672;</p></div><div class='rotater'>";var _iteratorNormalCompletion = true;
+          l = "<div class='previous'><p>" + this.arrowSymbol_l + "</p></div><div class='rotater'>";var _iteratorNormalCompletion = true;
       var _didIteratorError = false;
       var _iteratorError = undefined;
 
       try {
         for (var _iterator = this.selector.children[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-          var _s2 = _step.value;
-          e = _s2.getAttribute("src"), t.push(e), l = l + "<div class='carousel-img-holder'><img src=" + e + " class='carousel-img' /></div>";
+          var _o2 = _step.value;
+          e = _o2.getAttribute("src"), t.push(e), l = l + "<div class='carousel-img-holder'><img src=" + e + " class='carousel-img' /></div>";
         }
       } catch (err) {
         _didIteratorError = true;
@@ -47,16 +47,16 @@ var Carousel = function () {
         }
       }
 
-      l = l + "</div><div class='next'><p>&#8674;</p></div><div class=\"carousel-buttons\"></div>", this.selector.innerHTML = l;var s = this.selector.style;var _ref = [this.bgColor, this.width, this.height, "flex", "center", "relative", "wrap"];
-      s.background = _ref[0];
-      s.width = _ref[1];
-      s.height = _ref[2];
-      s.display = _ref[3];
-      s.justifyContent = _ref[4];
-      s.position = _ref[5];
-      s.flexWrap = _ref[6];
-      var o = this.selector.childNodes[0].style,
-          i = this.selector.childNodes[2].style;o.position = i.position = "relative", o.top = i.top = "0", o.height = i.height = "90%", o.width = i.width = "10%", o.display = i.display = "flex", o.alignItems = i.alignItems = "center", o.fontSize = i.fontSize = this.arrowSize, o.color = i.color = this.arrowColor, o.justifyContent = i.justifyContent = "center", o.flexFlow = "row", i.flexFlow = "row-reverse", o.left = "0", i.right = "0", o.cursor = i.cursor = "pointer";var r = this.selector.childNodes[1];r.style.display = "flex", r.style.height = "90%", r.style.width = "80%", r.style.position = "relative", r.style.overflow = "hidden";var _iteratorNormalCompletion2 = true;
+      l = l + "</div><div class='next'><p>" + this.arrowSymbol_r + "</p></div><div class=\"carousel-buttons\"></div>", this.selector.innerHTML = l;var o = this.selector.style;var _ref = [this.bgColor, this.width, this.height, "flex", "center", "relative", "wrap"];
+      o.background = _ref[0];
+      o.width = _ref[1];
+      o.height = _ref[2];
+      o.display = _ref[3];
+      o.justifyContent = _ref[4];
+      o.position = _ref[5];
+      o.flexWrap = _ref[6];
+      var s = this.selector.childNodes[0].style,
+          r = this.selector.childNodes[2].style;s.position = r.position = "relative", s.top = r.top = "0", s.height = r.height = "90%", s.width = r.width = "10%", s.display = r.display = "flex", s.alignItems = r.alignItems = "center", s.fontSize = r.fontSize = this.arrowSize, s.color = r.color = this.arrowColor, s.justifyContent = r.justifyContent = "center", s.flexFlow = "row", r.flexFlow = "row-reverse", s.left = "0", r.right = "0", s.cursor = r.cursor = "pointer";var i = this.selector.childNodes[1];i.style.display = "flex", i.style.height = "90%", i.style.width = "80%", i.style.position = "relative", i.style.overflow = "hidden";var _iteratorNormalCompletion2 = true;
       var _didIteratorError2 = false;
       var _iteratorError2 = undefined;
 
@@ -64,8 +64,8 @@ var Carousel = function () {
         for (var _iterator2 = this.selector.childNodes[1].childNodes[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
           var _e2 = _step2.value;
           var _t2 = .8 * this.selector.getBoundingClientRect().height,
-              _l2 = _t2;_t2 += "px";var _s3 = this.selector.getBoundingClientRect().height / 10 + "px",
-              _o = (this.selector.getBoundingClientRect().width - document.querySelectorAll(this.identifier + " .next")[0].getBoundingClientRect().width - document.querySelectorAll(this.identifier + " .previous")[0].getBoundingClientRect().width) / this.number - this.selector.getBoundingClientRect().height / 10 * 2 + "px";_e2.setAttribute("style", "height: " + _t2 + "; width: " + _o + "; margin: " + _s3 + "; display: flex; align-items: center; justify-content: center;  transition: 0.5s;"), _e2.childNodes[0].style.width = _o, _e2.childNodes[0].style.height = .8 * _l2 + "px", _e2.childNodes[0].style.margin = "auto";
+              _l2 = _t2;_t2 += "px";var _o3 = this.selector.getBoundingClientRect().height / 10 + "px",
+              _s = (this.selector.getBoundingClientRect().width - document.querySelectorAll(this.identifier + " .next")[0].getBoundingClientRect().width - document.querySelectorAll(this.identifier + " .previous")[0].getBoundingClientRect().width) / this.number - this.selector.getBoundingClientRect().height / 10 * 2 + "px";_e2.setAttribute("style", "height: " + _t2 + "; width: " + _s + "; margin: " + _o3 + "; display: flex; align-items: center; justify-content: center;  transition: 0.5s;"), _e2.childNodes[0].style.width = _s, _e2.childNodes[0].style.height = .8 * _l2 + "px", _e2.childNodes[0].style.margin = "auto";
         }
       } catch (err) {
         _didIteratorError2 = true;
@@ -94,7 +94,7 @@ var Carousel = function () {
       for (var _e = 0; _e < d; _e++) {
         var _t = .4 * this.selector.childNodes[3].getBoundingClientRect().height,
             _l = .4 * this.selector.childNodes[3].getBoundingClientRect().height,
-            _s = _t / 2;var u = document.createElement("div");u.setAttribute("class", "carousel-button-blob"), u.setAttribute("style", "height: " + _t + "px; width: " + _l + "px; margin: " + _s + "px; background: " + this.arrowColor + "; border: 1px solid " + this.arrowColor + "; border-radius: 50%; transition: 0.2s; cursor: pointer;"), this.selector.childNodes[3].appendChild(u), u.setAttribute("id", "ez-cbb-" + (_e + 1)), 0 == _e && u.setAttribute("class", "carousel-button-blob selected");
+            _o = _t / 2;var a = document.createElement("div");a.setAttribute("class", "carousel-button-blob"), a.setAttribute("style", "height: " + _t + "px; width: " + _l + "px; margin: " + _o + "px; background: " + this.arrowColor + "; border: 1px solid " + this.arrowColor + "; border-radius: 50%; transition: 0.2s; cursor: pointer;"), this.selector.childNodes[3].appendChild(a), a.setAttribute("id", "ez-cbb-" + (_e + 1)), 0 == _e && a.setAttribute("class", "carousel-button-blob selected");
       }this.carouselActions(), "on" == this.autoScroll && this.autoScroller();
     }
   }, {
@@ -103,15 +103,15 @@ var Carousel = function () {
       var e = void 0,
           t = void 0,
           l = void 0,
-          s = void 0,
           o = void 0,
-          i = void 0,
-          r = void 0;s = 1, i = 0, t = this.selector, r = this.identifier, l = Math.ceil(this.selector.childNodes[1].childNodes.length / this.number), console.log(t), document.querySelector(this.identifier + " .selected").style.background = "transparent";var _iteratorNormalCompletion3 = true;
+          s = void 0,
+          r = void 0,
+          i = void 0;o = 1, r = 0, t = this.selector, i = this.identifier, l = Math.ceil(this.selector.childNodes[1].childNodes.length / this.number), console.log(t), document.querySelector(this.identifier + " .selected").style.background = "transparent";var _iteratorNormalCompletion3 = true;
       var _didIteratorError3 = false;
       var _iteratorError3 = undefined;
 
       try {
-        for (var _iterator3 = document.querySelectorAll(r + " .carousel-button-blob")[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+        for (var _iterator3 = document.querySelectorAll(i + " .carousel-button-blob")[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
           var _t7 = _step3.value;
           if (-1 == [].concat(_toConsumableArray(_t7.classList)).indexOf("selected")) {
             e = _t7.style.background;break;
@@ -149,9 +149,9 @@ var Carousel = function () {
             var _iteratorError13 = undefined;
 
             try {
-              for (var _iterator13 = document.querySelectorAll(r + " .carousel-button-blob")[Symbol.iterator](), _step13; !(_iteratorNormalCompletion13 = (_step13 = _iterator13.next()).done); _iteratorNormalCompletion13 = true) {
+              for (var _iterator13 = document.querySelectorAll(i + " .carousel-button-blob")[Symbol.iterator](), _step13; !(_iteratorNormalCompletion13 = (_step13 = _iterator13.next()).done); _iteratorNormalCompletion13 = true) {
                 var _e9 = _step13.value;
-                -1 != [].concat(_toConsumableArray(_e9.classList)).indexOf("selected") && (s = _e9.id.slice(-1 * (_e9.id.length - 7)));
+                -1 != [].concat(_toConsumableArray(_e9.classList)).indexOf("selected") && (o = _e9.id.slice(-1 * (_e9.id.length - 7)));
               }
             } catch (err) {
               _didIteratorError13 = true;
@@ -173,7 +173,7 @@ var Carousel = function () {
             var _iteratorError14 = undefined;
 
             try {
-              for (var _iterator14 = document.querySelectorAll(r + " .carousel-button-blob")[Symbol.iterator](), _step14; !(_iteratorNormalCompletion14 = (_step14 = _iterator14.next()).done); _iteratorNormalCompletion14 = true) {
+              for (var _iterator14 = document.querySelectorAll(i + " .carousel-button-blob")[Symbol.iterator](), _step14; !(_iteratorNormalCompletion14 = (_step14 = _iterator14.next()).done); _iteratorNormalCompletion14 = true) {
                 var _e10 = _step14.value;
                 -1 != [].concat(_toConsumableArray(_e10.classList)).indexOf("selected") && _e10.classList.remove("selected");
               }
@@ -197,7 +197,7 @@ var Carousel = function () {
             var _iteratorError15 = undefined;
 
             try {
-              for (var _iterator15 = document.querySelectorAll(r + " .carousel-button-blob")[Symbol.iterator](), _step15; !(_iteratorNormalCompletion15 = (_step15 = _iterator15.next()).done); _iteratorNormalCompletion15 = true) {
+              for (var _iterator15 = document.querySelectorAll(i + " .carousel-button-blob")[Symbol.iterator](), _step15; !(_iteratorNormalCompletion15 = (_step15 = _iterator15.next()).done); _iteratorNormalCompletion15 = true) {
                 var _t8 = _step15.value;
                 -1 == [].concat(_toConsumableArray(_t8.classList)).indexOf("selected") && (_t8.style.background = e);
               }
@@ -216,15 +216,15 @@ var Carousel = function () {
               }
             }
 
-            o = l.id.slice(-1 * (l.id.length - 7));var c = t.getBoundingClientRect().width - document.querySelectorAll(r + " .next")[0].getBoundingClientRect().width - document.querySelectorAll(r + " .previous")[0].getBoundingClientRect().width,
-                d = s - o;var _iteratorNormalCompletion16 = true;
+            s = l.id.slice(-1 * (l.id.length - 7));var c = t.getBoundingClientRect().width - document.querySelectorAll(i + " .next")[0].getBoundingClientRect().width - document.querySelectorAll(i + " .previous")[0].getBoundingClientRect().width,
+                d = o - s;var _iteratorNormalCompletion16 = true;
             var _didIteratorError16 = false;
             var _iteratorError16 = undefined;
 
             try {
               for (var _iterator16 = t.childNodes[1].childNodes[Symbol.iterator](), _step16; !(_iteratorNormalCompletion16 = (_step16 = _iterator16.next()).done); _iteratorNormalCompletion16 = true) {
                 var _e11 = _step16.value;
-                _e11.style.transform = "translateX(" + (i + d * c) + "px)";
+                _e11.style.transform = "translateX(" + (r + d * c) + "px)";
               }
             } catch (err) {
               _didIteratorError16 = true;
@@ -241,11 +241,11 @@ var Carousel = function () {
               }
             }
 
-            i += d * c;
+            r += d * c;
           };
         };
 
-        for (var _iterator4 = document.querySelectorAll(r + " .carousel-button-blob")[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
+        for (var _iterator4 = document.querySelectorAll(i + " .carousel-button-blob")[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
           _loop();
         }
       } catch (err) {
@@ -263,19 +263,19 @@ var Carousel = function () {
         }
       }
 
-      document.querySelector(r + " .previous").onclick = function () {
-        var s = void 0;var _iteratorNormalCompletion5 = true;
+      document.querySelector(i + " .previous").onclick = function () {
+        var o = void 0;var _iteratorNormalCompletion5 = true;
         var _didIteratorError5 = false;
         var _iteratorError5 = undefined;
 
         try {
-          for (var _iterator5 = document.querySelectorAll(r + " .carousel-button-blob").entries()[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
+          for (var _iterator5 = document.querySelectorAll(i + " .carousel-button-blob").entries()[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
             var _step5$value = _slicedToArray(_step5.value, 2),
                 _e5 = _step5$value[0],
                 _t3 = _step5$value[1];
 
             if (-1 != [].concat(_toConsumableArray(_t3.classList)).indexOf("selected")) {
-              s = _t3.id, _t3.classList.remove("selected");0 == _e5 ? _t3.classList.add("selected") : document.querySelectorAll(r + " .carousel-button-blob")[_e5 - 1].classList.add("selected");break;
+              o = _t3.id, _t3.classList.remove("selected");0 == _e5 ? _t3.classList.add("selected") : document.querySelectorAll(i + " .carousel-button-blob")[_e5 - 1].classList.add("selected");break;
             }
           }
         } catch (err) {
@@ -293,15 +293,15 @@ var Carousel = function () {
           }
         }
 
-        var o = t.getBoundingClientRect().width - document.querySelectorAll(r + " .next")[0].getBoundingClientRect().width - document.querySelectorAll(r + " .previous")[0].getBoundingClientRect().width;if ("ez-cbb-1" == s) {
-          i = -1 * (l - 1) * o;var _iteratorNormalCompletion6 = true;
+        var s = t.getBoundingClientRect().width - document.querySelectorAll(i + " .next")[0].getBoundingClientRect().width - document.querySelectorAll(i + " .previous")[0].getBoundingClientRect().width;if ("ez-cbb-1" == o) {
+          r = -1 * (l - 1) * s;var _iteratorNormalCompletion6 = true;
           var _didIteratorError6 = false;
           var _iteratorError6 = undefined;
 
           try {
             for (var _iterator6 = t.childNodes[1].childNodes[Symbol.iterator](), _step6; !(_iteratorNormalCompletion6 = (_step6 = _iterator6.next()).done); _iteratorNormalCompletion6 = true) {
               var _e3 = _step6.value;
-              _e3.style.transform = "translateX(" + i + "px)";
+              _e3.style.transform = "translateX(" + r + "px)";
             }
           } catch (err) {
             _didIteratorError6 = true;
@@ -318,7 +318,7 @@ var Carousel = function () {
             }
           }
 
-          document.querySelectorAll(r + " .carousel-button-blob")[0].classList.remove("selected"), document.querySelectorAll(r + " .carousel-button-blob")[l - 1].classList.add("selected");
+          document.querySelectorAll(i + " .carousel-button-blob")[0].classList.remove("selected"), document.querySelectorAll(i + " .carousel-button-blob")[l - 1].classList.add("selected");
         } else {
           var _iteratorNormalCompletion7 = true;
           var _didIteratorError7 = false;
@@ -327,7 +327,7 @@ var Carousel = function () {
           try {
             for (var _iterator7 = t.childNodes[1].childNodes[Symbol.iterator](), _step7; !(_iteratorNormalCompletion7 = (_step7 = _iterator7.next()).done); _iteratorNormalCompletion7 = true) {
               var _e4 = _step7.value;
-              _e4.style.transform = "translateX(" + (i + o) + "px)";
+              _e4.style.transform = "translateX(" + (r + s) + "px)";
             }
           } catch (err) {
             _didIteratorError7 = true;
@@ -344,13 +344,13 @@ var Carousel = function () {
             }
           }
 
-          i += o;
+          r += s;
         }var _iteratorNormalCompletion8 = true;
         var _didIteratorError8 = false;
         var _iteratorError8 = undefined;
 
         try {
-          for (var _iterator8 = document.querySelectorAll(r + " .carousel-button-blob")[Symbol.iterator](), _step8; !(_iteratorNormalCompletion8 = (_step8 = _iterator8.next()).done); _iteratorNormalCompletion8 = true) {
+          for (var _iterator8 = document.querySelectorAll(i + " .carousel-button-blob")[Symbol.iterator](), _step8; !(_iteratorNormalCompletion8 = (_step8 = _iterator8.next()).done); _iteratorNormalCompletion8 = true) {
             var _t4 = _step8.value;
             -1 == [].concat(_toConsumableArray(_t4.classList)).indexOf("selected") ? _t4.style.background = e : _t4.style.background = "transparent";
           }
@@ -368,19 +368,19 @@ var Carousel = function () {
             }
           }
         }
-      }, document.querySelector(r + " .next").onclick = function () {
-        var s = void 0;var _iteratorNormalCompletion9 = true;
+      }, document.querySelector(i + " .next").onclick = function () {
+        var o = void 0;var _iteratorNormalCompletion9 = true;
         var _didIteratorError9 = false;
         var _iteratorError9 = undefined;
 
         try {
-          for (var _iterator9 = document.querySelectorAll(r + " .carousel-button-blob").entries()[Symbol.iterator](), _step9; !(_iteratorNormalCompletion9 = (_step9 = _iterator9.next()).done); _iteratorNormalCompletion9 = true) {
+          for (var _iterator9 = document.querySelectorAll(i + " .carousel-button-blob").entries()[Symbol.iterator](), _step9; !(_iteratorNormalCompletion9 = (_step9 = _iterator9.next()).done); _iteratorNormalCompletion9 = true) {
             var _step9$value = _slicedToArray(_step9.value, 2),
                 _e8 = _step9$value[0],
                 _t5 = _step9$value[1];
 
             if (-1 != [].concat(_toConsumableArray(_t5.classList)).indexOf("selected")) {
-              s = _t5.id, _t5.classList.remove("selected");_e8 == l - 1 ? _t5.classList.add("selected") : document.querySelectorAll(r + " .carousel-button-blob")[_e8 + 1].classList.add("selected");break;
+              o = _t5.id, _t5.classList.remove("selected");_e8 == l - 1 ? _t5.classList.add("selected") : document.querySelectorAll(i + " .carousel-button-blob")[_e8 + 1].classList.add("selected");break;
             }
           }
         } catch (err) {
@@ -398,15 +398,15 @@ var Carousel = function () {
           }
         }
 
-        var o = t.getBoundingClientRect().width - document.querySelectorAll(r + " .next")[0].getBoundingClientRect().width - document.querySelectorAll(r + " .previous")[0].getBoundingClientRect().width;if (s == "ez-cbb-" + l) {
-          i = 0;var _iteratorNormalCompletion10 = true;
+        var s = t.getBoundingClientRect().width - document.querySelectorAll(i + " .next")[0].getBoundingClientRect().width - document.querySelectorAll(i + " .previous")[0].getBoundingClientRect().width;if (o == "ez-cbb-" + l) {
+          r = 0;var _iteratorNormalCompletion10 = true;
           var _didIteratorError10 = false;
           var _iteratorError10 = undefined;
 
           try {
             for (var _iterator10 = t.childNodes[1].childNodes[Symbol.iterator](), _step10; !(_iteratorNormalCompletion10 = (_step10 = _iterator10.next()).done); _iteratorNormalCompletion10 = true) {
               var _e6 = _step10.value;
-              _e6.style.transform = "translateX(" + i + "px)";
+              _e6.style.transform = "translateX(" + r + "px)";
             }
           } catch (err) {
             _didIteratorError10 = true;
@@ -423,16 +423,16 @@ var Carousel = function () {
             }
           }
 
-          document.querySelectorAll(r + " .carousel-button-blob")[0].classList.add("selected"), document.querySelectorAll(r + " .carousel-button-blob")[l - 1].classList.remove("selected");
+          document.querySelectorAll(i + " .carousel-button-blob")[0].classList.add("selected"), document.querySelectorAll(i + " .carousel-button-blob")[l - 1].classList.remove("selected");
         } else {
-          i -= o;var _iteratorNormalCompletion11 = true;
+          r -= s;var _iteratorNormalCompletion11 = true;
           var _didIteratorError11 = false;
           var _iteratorError11 = undefined;
 
           try {
             for (var _iterator11 = t.childNodes[1].childNodes[Symbol.iterator](), _step11; !(_iteratorNormalCompletion11 = (_step11 = _iterator11.next()).done); _iteratorNormalCompletion11 = true) {
               var _e7 = _step11.value;
-              _e7.style.transform = "translateX(" + i + "px)";
+              _e7.style.transform = "translateX(" + r + "px)";
             }
           } catch (err) {
             _didIteratorError11 = true;
@@ -453,7 +453,7 @@ var Carousel = function () {
         var _iteratorError12 = undefined;
 
         try {
-          for (var _iterator12 = document.querySelectorAll(r + " .carousel-button-blob")[Symbol.iterator](), _step12; !(_iteratorNormalCompletion12 = (_step12 = _iterator12.next()).done); _iteratorNormalCompletion12 = true) {
+          for (var _iterator12 = document.querySelectorAll(i + " .carousel-button-blob")[Symbol.iterator](), _step12; !(_iteratorNormalCompletion12 = (_step12 = _iterator12.next()).done); _iteratorNormalCompletion12 = true) {
             var _t6 = _step12.value;
             -1 == [].concat(_toConsumableArray(_t6.classList)).indexOf("selected") ? _t6.style.background = e : _t6.style.background = "transparent";
           }
@@ -508,8 +508,8 @@ var Carousel = function () {
         for (var _iterator18 = this.selector.childNodes[1].childNodes[Symbol.iterator](), _step18; !(_iteratorNormalCompletion18 = (_step18 = _iterator18.next()).done); _iteratorNormalCompletion18 = true) {
           var _e16 = _step18.value;
           var _t12 = .8 * this.selector.getBoundingClientRect().height,
-              _l3 = _t12;_t12 += "px";var _s4 = this.selector.getBoundingClientRect().height / 10 + "px",
-              _o2 = (this.selector.getBoundingClientRect().width - document.querySelectorAll(this.identifier + " .next")[0].getBoundingClientRect().width - document.querySelectorAll(this.identifier + " .previous")[0].getBoundingClientRect().width) / this.number - this.selector.getBoundingClientRect().height / 10 * 2 + "px";_e16.setAttribute("style", "height: " + _t12 + "; width: " + _o2 + "; margin: " + _s4 + "; display: flex; align-items: center; justify-content: center;  transition: 0.5s;"), _e16.childNodes[0].style.width = _o2, _e16.childNodes[0].style.height = .8 * _l3 + "px", _e16.childNodes[0].style.margin = "auto";
+              _l3 = _t12;_t12 += "px";var _o4 = this.selector.getBoundingClientRect().height / 10 + "px",
+              _s2 = (this.selector.getBoundingClientRect().width - document.querySelectorAll(this.identifier + " .next")[0].getBoundingClientRect().width - document.querySelectorAll(this.identifier + " .previous")[0].getBoundingClientRect().width) / this.number - this.selector.getBoundingClientRect().height / 10 * 2 + "px";_e16.setAttribute("style", "height: " + _t12 + "; width: " + _s2 + "; margin: " + _o4 + "; display: flex; align-items: center; justify-content: center;  transition: 0.5s;"), _e16.childNodes[0].style.width = _s2, _e16.childNodes[0].style.height = .8 * _l3 + "px", _e16.childNodes[0].style.margin = "auto";
         }
       } catch (err) {
         _didIteratorError18 = true;
@@ -551,10 +551,10 @@ var Carousel = function () {
       }
 
       var l = void 0,
-          s = void 0,
-          o = e.identifier,
-          i = 0,
-          r = e.selector.getBoundingClientRect().width - document.querySelectorAll(o + " .next")[0].getBoundingClientRect().width - document.querySelectorAll(o + " .previous")[0].getBoundingClientRect().width,
+          o = void 0,
+          s = e.identifier,
+          r = 0,
+          i = e.selector.getBoundingClientRect().width - document.querySelectorAll(s + " .next")[0].getBoundingClientRect().width - document.querySelectorAll(s + " .previous")[0].getBoundingClientRect().width,
           c = Math.ceil(e.selector.childNodes[1].childNodes.length / this.number);document.body.onload = function () {
         interval = setInterval(function () {
           var _iteratorNormalCompletion20 = true;
@@ -562,10 +562,10 @@ var Carousel = function () {
           var _iteratorError20 = undefined;
 
           try {
-            for (var _iterator20 = document.querySelectorAll(o + " .carousel-button-blob")[Symbol.iterator](), _step20; !(_iteratorNormalCompletion20 = (_step20 = _iterator20.next()).done); _iteratorNormalCompletion20 = true) {
+            for (var _iterator20 = document.querySelectorAll(s + " .carousel-button-blob")[Symbol.iterator](), _step20; !(_iteratorNormalCompletion20 = (_step20 = _iterator20.next()).done); _iteratorNormalCompletion20 = true) {
               var _e12 = _step20.value;
               if (-1 == [].concat(_toConsumableArray(_e12.classList)).indexOf("selected")) {
-                s = _e12.style.background;break;
+                o = _e12.style.background;break;
               }
             }
           } catch (err) {
@@ -588,13 +588,13 @@ var Carousel = function () {
           var _iteratorError21 = undefined;
 
           try {
-            for (var _iterator21 = document.querySelectorAll(o + " .carousel-button-blob").entries()[Symbol.iterator](), _step21; !(_iteratorNormalCompletion21 = (_step21 = _iterator21.next()).done); _iteratorNormalCompletion21 = true) {
+            for (var _iterator21 = document.querySelectorAll(s + " .carousel-button-blob").entries()[Symbol.iterator](), _step21; !(_iteratorNormalCompletion21 = (_step21 = _iterator21.next()).done); _iteratorNormalCompletion21 = true) {
               var _step21$value = _slicedToArray(_step21.value, 2),
                   _e13 = _step21$value[0],
                   _t11 = _step21$value[1];
 
               if (-1 != [].concat(_toConsumableArray(_t11.classList)).indexOf("selected")) {
-                l = _t11.id, _t11.classList.remove("selected");_e13 == c - 1 ? _t11.classList.add("selected") : document.querySelectorAll(o + " .carousel-button-blob")[_e13 + 1].classList.add("selected");break;
+                l = _t11.id, _t11.classList.remove("selected");_e13 == c - 1 ? _t11.classList.add("selected") : document.querySelectorAll(s + " .carousel-button-blob")[_e13 + 1].classList.add("selected");break;
               }
             }
           } catch (err) {
@@ -613,14 +613,14 @@ var Carousel = function () {
           }
 
           if (l == "ez-cbb-" + c) {
-            i = 0;var _iteratorNormalCompletion22 = true;
+            r = 0;var _iteratorNormalCompletion22 = true;
             var _didIteratorError22 = false;
             var _iteratorError22 = undefined;
 
             try {
               for (var _iterator22 = e.selector.childNodes[1].childNodes[Symbol.iterator](), _step22; !(_iteratorNormalCompletion22 = (_step22 = _iterator22.next()).done); _iteratorNormalCompletion22 = true) {
                 var _t9 = _step22.value;
-                _t9.style.transform = "translateX(" + i + "px)";
+                _t9.style.transform = "translateX(" + r + "px)";
               }
             } catch (err) {
               _didIteratorError22 = true;
@@ -637,16 +637,16 @@ var Carousel = function () {
               }
             }
 
-            document.querySelectorAll(o + " .carousel-button-blob")[0].classList.add("selected"), document.querySelectorAll(o + " .carousel-button-blob")[c - 1].classList.remove("selected");
+            document.querySelectorAll(s + " .carousel-button-blob")[0].classList.add("selected"), document.querySelectorAll(s + " .carousel-button-blob")[c - 1].classList.remove("selected");
           } else {
-            i -= r;var _iteratorNormalCompletion23 = true;
+            r -= i;var _iteratorNormalCompletion23 = true;
             var _didIteratorError23 = false;
             var _iteratorError23 = undefined;
 
             try {
               for (var _iterator23 = e.selector.childNodes[1].childNodes[Symbol.iterator](), _step23; !(_iteratorNormalCompletion23 = (_step23 = _iterator23.next()).done); _iteratorNormalCompletion23 = true) {
                 var _t10 = _step23.value;
-                _t10.style.transform = "translateX(" + i + "px)";
+                _t10.style.transform = "translateX(" + r + "px)";
               }
             } catch (err) {
               _didIteratorError23 = true;
@@ -667,9 +667,9 @@ var Carousel = function () {
           var _iteratorError24 = undefined;
 
           try {
-            for (var _iterator24 = document.querySelectorAll(o + " .carousel-button-blob")[Symbol.iterator](), _step24; !(_iteratorNormalCompletion24 = (_step24 = _iterator24.next()).done); _iteratorNormalCompletion24 = true) {
+            for (var _iterator24 = document.querySelectorAll(s + " .carousel-button-blob")[Symbol.iterator](), _step24; !(_iteratorNormalCompletion24 = (_step24 = _iterator24.next()).done); _iteratorNormalCompletion24 = true) {
               var _e14 = _step24.value;
-              -1 == [].concat(_toConsumableArray(_e14.classList)).indexOf("selected") ? _e14.style.background = s : _e14.style.background = "transparent";
+              -1 == [].concat(_toConsumableArray(_e14.classList)).indexOf("selected") ? _e14.style.background = o : _e14.style.background = "transparent";
             }
           } catch (err) {
             _didIteratorError24 = true;
