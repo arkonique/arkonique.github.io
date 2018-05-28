@@ -48,7 +48,7 @@ Make a Carousel object using `new Carousel(<selector of the carousel container>)
 	const carousel = new Carousel("#carousel");
 	carousel.makeCarousel();
 ```
-(You can replace the const with var if you want support for older browsers and are not using babel).
+(You can replace the const with var if you want support for older browsers and are not using a transpiler such as babel).
 
 The Carousel constructor takes default "#carousel" as the selector. So if you have named your carousel container with an id of `carousel`, then you can just initialise the carousel by -
 
@@ -85,7 +85,7 @@ If `data-ez-linked` is set to true then a data attribute `data-ez-href` will hav
 **eg -**
 
 ```html
-	<div id="carousel" data-ez-view-number=5 data-ez-autoscroll="on"
+    <div id="carousel" data-ez-view-number=5 data-ez-autoscroll="on"
 	 data-ez-width="100%" data-ez-height="200px" data-ez-bg="#444"
 	 data-ez-arrow-color="white" data-ez-arrow-size="10%" data-ez-linked="true">
         <img src="..." data-ez-href="...">
