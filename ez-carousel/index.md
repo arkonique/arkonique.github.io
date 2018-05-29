@@ -2,7 +2,7 @@
 
 
 
-Go to [the project repository](https://github.com/arkonique/arkonique.github.io/ez-carousel)
+Go to [the project repository](https://github.com/arkonique/arkonique.github.io/tree/master/ez-carousel)
 <br>
 View [Demo](demo)
 
