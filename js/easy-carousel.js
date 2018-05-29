@@ -31,6 +31,7 @@ class Carousel {
         const arrowtype = 1;
         const linked = "false";
         const scrolltime = 5000;
+
         this.selector = document.querySelector(selector);
         this.number = (this.selector.dataset.ezViewNumber == undefined) ? number : this.selector.dataset.ezViewNumber;
         this.autoScroll = (this.selector.dataset.ezAutoscroll == undefined) ? autoscroll : this.selector.dataset.ezAutoscroll;
@@ -43,6 +44,8 @@ class Carousel {
         this.arrowType = (this.selector.dataset.ezArrowType == undefined) ? arrowtype : this.selector.dataset.ezArrowType;
         this.identifier = selector;
         this.scrollTime = (this.selector.dataset.ezScrollTime == undefined) ? scrolltime : this.selector.dataset.ezScrollTime;
+        this.linked = (this.selector.dataset.ezLinked == undefined) ? linked : this.selector.dataset.ezLinked;
+
         if (this.arrowType == 1) {
             this.arrowSymbol_l = "&larr;";
             this.arrowSymbol_r = "&rarr;";
@@ -86,11 +89,16 @@ class Carousel {
         //Generating New HTML
         let srcList = [];
         let str = `<div class='previous'><p>${this.arrowSymbol_l}</p></div><div class='rotater'>`;
-        let src;
+        let src, href;
         for (let i of this.selector.children) {
             src = i.getAttribute("src");
             srcList.push(src);
-            str = `${str}<div class='carousel-img-holder'><img src=${src} class='carousel-img' /></div>`;
+            if (this.linked == 'false') {
+                str = `${str}<div class='carousel-img-holder'><img src=${src} class='carousel-img' /></div>`;
+            } else {
+                href = i.getAttribute("data-ez-href");
+                str = `${str}<a class='carousel-links' href=${href}><div class='carousel-img-holder'><img src=${src} class='carousel-img' /></div></a>`
+            }
         }
         str = `${str}</div><div class='next'><p>${this.arrowSymbol_r}</p></div><div class="carousel-buttons"></div>`;
         this.selector.innerHTML = str;
@@ -138,6 +146,20 @@ class Carousel {
             i.childNodes[0].style.margin = "auto";
         }
 
+
+        if (this.linked == 'true') {
+            for (let i of this.selector.childNodes[1].childNodes) {
+                let height = this.selector.getBoundingClientRect().height * 0.8;
+                let heightNum = height;
+                height = height + "px";
+                let margin = (this.selector.getBoundingClientRect().height / 10) + "px";
+                let width = (((this.selector.getBoundingClientRect().width - document.querySelectorAll(`${this.identifier} .next`)[0].getBoundingClientRect().width - document.querySelectorAll(`${this.identifier} .previous`)[0].getBoundingClientRect().width) / this.number) - 2 * (this.selector.getBoundingClientRect().height / 10)) + "px";
+                i.childNodes[0].setAttribute('style', `height: ${height}; width: ${width}; margin: ${margin}; display: flex; align-items: center; justify-content: center;  transition: 0.5s;`);
+                i.childNodes[0].childNodes[0].style.width = width;
+                i.childNodes[0].childNodes[0].style.height = (0.8 * heightNum) + "px";
+                i.childNodes[0].childNodes[0].style.margin = "auto";
+            }
+        }
 
         //styling the button container and generating and styling buttons
         const buttonCont = this.selector.childNodes[3].style;

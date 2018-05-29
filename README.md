@@ -76,6 +76,7 @@ There are many options provided to customise your carousel. More features will b
 | `data-ez-autoscroll`   | Specify whether the carousel will scroll through the list automatically               | off        | off/on             | 
 | `data-ez-scroll-time`  | Specify the time interval for a slide change								             | 5000	      | Time in miliseconds|
 | `data-ez-arrow-type`   | Specify the type of arrow to be used in the buttons (different types are listed below)| 1		  | any number in 1-10 |
+| `data-ez-linked`       | Specify whether the images being displayed will have links to some website            | false      | true/false         |
 
 **Arrow Types**
 1. Basic Arrow - `data-ez-arrow-type=1` &larr; &rarr;  (Default)
@@ -90,12 +91,7 @@ There are many options provided to customise your carousel. More features will b
 10. Big single angle arrow - `data-ez-arrow-type=10` &#10096; &#10097;
 
 
-More options are there in the source code that have not been implemented yet. And more will be added later. Those currently in production are - 
-
-| Data attribute         | Usage                                                                      | Default    | Input              |
-| ---------------------- |:--------------------------------------------------------------------------:|:----------:|:------------------:|
-| `data-ez-linked`       | Specify whether the images being displayed will have links to some website | false      | true/false         
-
+**Linked Images**
 If `data-ez-linked` is set to true then a data attribute `data-ez-href` will have to be added to all the images in the carousel which will contain the link of the webpage that the image is linked to.
 
 **eg -**
@@ -121,7 +117,7 @@ As mentioned in the previous section, some options are in production which have 
 - [ ] CSS + Jquery based version of the library
 - [ ] Jquery based version of the library
 - [X] ~~Auto Scroll Feature~~
-- [ ] Linked Images (In production)
+- [X] ~~Linked Images (In production)~~
 - [ ] Support for all kinds of images
 - [X] ~~Option to change arrow type~~
 - [X] ~~ES5 support~~
