@@ -3,7 +3,7 @@
 
 
 Go to [the project homepage](https://arkonique.github.io/ez-carousel)<br>
-View [demo](https://arkonique.github.ioez-carousel//demo)
+View [demo](https://arkonique.github.io/ez-carousel/demo)
 
 Easy Carousel is a very minimalistic lightweight carousel plugin built in pure Javascript. It is written mainy for a carousel which can display many brand logos and not for traditional image carousels. Although in a future update I might add a feature to use all kinds of images as well. However at a minified size of just 7kb, it is one of the lightest ones out there.
 
