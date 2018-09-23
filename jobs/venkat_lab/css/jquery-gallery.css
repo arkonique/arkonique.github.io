@@ -1,0 +1,84 @@
+ul.gallery-slideshow > img, ul {margin: 0; padding: 0;}
+ul.gallery-slideshow {
+  position: relative;
+  list-style: none;
+  background: #000000;
+  overflow: hidden;
+}
+ul.gallery-slideshow li img {
+  position: absolute;
+  min-width: 100%; min-height: 100%;
+}
+/*gallery controls*/
+.gallery-control{
+  position: absolute; z-index: 1;
+  top: 0; bottom: 0;
+  width: 40px; height: 40px;
+  background: #73d0f4;
+  margin: auto;
+  cursor: pointer;
+}
+.gallery-control.prev { left: -5px; }
+.gallery-control.next { right: -5px; }
+.gallery-control.trigger {
+  left: 0; right: 0;
+  width: 50px; height: 50px;
+  border-radius:50%;-webkit-border-radius:50%;-moz-border-radius:50%;
+}
+.gallery-control:after{
+  position: absolute;
+  z-index: 2;
+  top: 0; bottom: 0; left: 0; right: 0;
+  margin: auto;
+  content: "";
+  width: 20px; height: 20px;
+  box-sizing: border-box;
+  border-style: solid;
+  border-color: transparent;
+}
+.gallery-control.prev:after {
+  border-width: 10px 15px 10px 0px;
+  border-right-color: #ffffff;
+}
+.gallery-control.next:after {
+  border-width: 10px 0px 10px 15px;
+  border-left-color: #ffffff;
+}
+.gallery-control.trigger.pause:after{
+  border-style: double;
+  border-width: 0px 0px 0px 20px;
+  border-color: #ffffff;
+}
+.gallery-control.trigger.play:after{
+  left: 5px;
+  border-width: 10px 0px 10px 20px;
+  border-left-color: #ffffff;
+}
+/*gallery navigation*/
+ul.gallery-slideshow ul.gallery-navbar{
+  position: absolute;
+  bottom: 5%;
+  width: 100%;
+  text-align: center;
+}
+
+ul.gallery-navbar {
+  display: flex;
+  justify-content: center;
+}
+
+ul.gallery-navbar li{
+  all: unset;
+  position: relative;
+  display: inline-block;
+  width: 15px; height: 15px;
+  background: #73d0f450;
+  margin: 10px;
+  border-radius:50%;-webkit-border-radius:50%;-moz-border-radius:50%;
+  cursor: pointer;
+}
+ul.gallery-navbar li.active{ background: #73d0f4; }
+/**STATES**/
+ul.gallery-navbar li:hover, .gallery-control:hover{ transform: scale(0.9); }
+ul.gallery-navbar li:hover{ background: rgba(255,255,255,0.8); }
+ul.gallery-navbar li:active, .gallery-control:active { transform: scale(0.8); }
