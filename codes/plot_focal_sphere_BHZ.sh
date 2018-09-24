@@ -3,8 +3,8 @@
 # script to plot stations in a focal sphere
 # see command line at end for how to generate takeoff angle
 
-if [ "$#" -ne 4 ] ; then
-	echo "SYNTAX:  focal_sphere_locations.sh evname strike dip rake"
+if [ "$#" -ne 5 ] ; then
+	echo "SYNTAX:  focal_sphere_locations.sh evname strike dip rake depth"
 	exit
 fi
 
@@ -13,6 +13,7 @@ evname=$1
 strike=$2
 dip=$3
 rake=$4
+depth=$5
 #########
 
 epsfile="beachball_BHZ.eps"
@@ -43,7 +44,7 @@ r $file
 lh GCARC
 q
 !`
-	takeoff=`udtdd -GCARC $gcarc -EVDP 33 | awk '{ print 6*$1 }' | awk '{ print 57.2957795*atan2($1,sqrt(1-$1**2)) }'`
+	takeoff=`udtdd -GCARC $gcarc -EVDP $depth | awk '{ print 6*$1 }' | awk '{ print 57.2957795*atan2($1,sqrt(1-$1**2)) }'`
 	echo "$sta  $az $takeoff ?" >> polarities.pspolar
 	echo -e "$sta\t$az\t$gcarc" >> station_info
 done
