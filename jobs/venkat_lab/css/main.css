@@ -377,7 +377,11 @@ li {
 
 .r-mid img {
     padding: 20px;
-    margin: 50px;
+    margin: 20px;
+}
+
+.r-mid>p{
+    text-align: center;
 }
 
 .p-mid ul {
