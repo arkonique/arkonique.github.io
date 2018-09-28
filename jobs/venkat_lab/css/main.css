@@ -298,6 +298,9 @@ nav>ul>a {
 }
 
 .top.c-top {
+    background: url(../img/group-top.jpg);
+}
+.top.c-top {
     background: url(../img/contact-top.jpg);
 }
 
