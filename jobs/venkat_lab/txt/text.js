@@ -118,3 +118,49 @@ let publication_list=`
 - 2. Self-assembled Monolayers of Two Aromatic Disulfides and a Diselenide on Polycrystalline Silver Films: An Investigation by SERS and XPS. V. Mahalingam, G. Skanth, K. Bandyopadhyay, K. Vijayamohanan and T. Pradeep, J. Coll. Interface Sci. 1999, 212, 553-561.
 - 1. Self-assembled monolayers of 1,4-benzenedimethanethiol on polycrystalline silver and gold films: an investigation of structure, stability, dynamics and reactivity. K. V. G. K. Murty, V. Mahalingam and T. Pradeep, Langmuir, 1998, 14, 5446-5456.
 `
+
+let collaborators = `
+-   **Name:** Prof. T. Pradeep
+
+    **Position:** Professor
+
+    **Address:** Department of Chemistry, IIT-Madras, Chennai, India.
+
+    **E mail:** pradeep@iitm.ac.in
+
+
+-   **Name:** Dr. Vivek Polshettiwar
+
+    **Position:** Associate Professor 
+
+    **Address:** Department of Chemical Sciences, TIFR-Mumbai, Mumbai, India.
+
+    **E mail:** vivekpol@tifr.res.in
+
+
+-   **Name:** Prof. J. A. Capobianco
+
+    **Position:** Professor
+
+    **Address:** Department of Chemistry & Biochemistry,  Concordia University, Canada.
+
+    **E mail:** john.capobianco@concordia.ca
+
+
+-   **Name:** Dr. Vasanthakumaran Sudarsan
+
+    **Position:** Scientist F, Chemistry Division
+
+    **Address:** Bhabha Atomic Research Centre, Mumbai, 400085, India. 
+
+    **E mail:** vsudar@barc.gov.in
+
+
+-   **Name:** Dr. Sri Sivakumar
+
+    **Position:** Assistant Professor
+
+    **Address:** Department of  Chemical Engineering, IIT-Kanpur, Kanpur, Uttar Pradesh, India.
+
+    **E mail:** srisiva@iitk.ac.in
+`

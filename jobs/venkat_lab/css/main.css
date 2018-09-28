@@ -303,6 +303,14 @@ nav>ul>a {
     background: url(../img/group-top.png);
 }
 
+.top.ga-top {
+    background: url(../img/gallery-top.jpg);
+}
+
+.top.co-top {
+    background: url(../img/collab-top.jpeg);
+}
+
 .top.c-top {
     background: url(../img/contact-top.jpg);
 }
@@ -441,6 +449,9 @@ li {
     width: 50%;
 }
 
+.right-info h2 {
+    color: var(--primary-color);
+}
 .c-mid form {
     padding: 0 50px 0 0;
     box-sizing: border-box;
@@ -627,4 +638,28 @@ textarea:focus {
     color: #444;
     font-family: 'Source sans pro';
     font-weight: normal;
+}
+
+.co-mid {
+    padding: 80px 150px;
+    font-size: 1.3rem;
+}
+
+.co-mid ul {
+    list-style: none
+}
+
+.co-mid p {
+    margin: 0
+}
+
+.co-mid li {
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 5px #0000002c;
+    border-radius: 13px;
+}
+
+.co-mid strong {
+    color: var(--primary-color);
 }

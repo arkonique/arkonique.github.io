@@ -211,3 +211,5 @@ for (i = 0; i < alumni.length; i++) {
 }
 
 $('.alumni').html(html_str)
+
+$('.co-mid').html(markdown.toHTML(collaborators))
