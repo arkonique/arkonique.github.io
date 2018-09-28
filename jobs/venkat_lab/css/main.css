@@ -595,7 +595,7 @@ textarea:focus {
     width: 45%;
     margin:2.5%;
     box-sizing:border-box;
-    height: 200px;
+    height: 220px;
     display:flex;
     box-shadow: 0 3px 10px #0000002c;
     border-radius: 13px;
