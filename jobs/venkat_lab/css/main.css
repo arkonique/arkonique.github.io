@@ -384,7 +384,7 @@ li {
 
 .r-mid img {
     padding: 20px;
-    margin: 20px;
+    margin: 20px 5px;
 }
 
 .r-mid>p {
@@ -514,7 +514,7 @@ textarea:focus {
     width: 96%;
     position: relative;
     box-sizing: border-box;
-    height: 80vh;
+    height: 90vh;
     box-shadow: 0 3px 10px #0000002c;
     border-radius: 13px;
 }
