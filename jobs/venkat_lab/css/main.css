@@ -724,6 +724,7 @@ textarea:focus {
 .photobox>div>div {
     height: 100%;
     overflow: hidden;
+    transition: 0.5s;
 }
 
 
@@ -761,4 +762,14 @@ textarea:focus {
     min-height: auto;
     width: auto;
     height: auto;
+}
+
+.closer-x-button {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    font-size: 2rem;
+    color: #fff;
+    display: none;
+    z-index: 50000000000;
 }

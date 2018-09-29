@@ -250,3 +250,13 @@ $('.slidebox>ul').slideshow({
     width: w,
     height: h
 });
+
+$('.photobox>div>div').focus(function(){
+    $('.top-menu').css('z-index','1');
+    $('.closer-x-button').css('display','flex');
+})
+
+$('.closer-x-button').click(function(){
+    $('.photobox>div>div').blur();
+    $('.top-menu').css('z-index',10000000);
+})
