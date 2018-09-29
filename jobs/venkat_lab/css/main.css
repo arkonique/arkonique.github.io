@@ -726,6 +726,7 @@ textarea:focus {
     height: 100%;
     overflow: hidden;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 
@@ -773,4 +774,5 @@ textarea:focus {
     color: #fff;
     display: none;
     z-index: 50000000000;
+    cursor: pointer;
 }
