@@ -220,7 +220,7 @@ slides = JSON.parse(slideshow);
 w = $(document).width()*0.7
 h = $(document).height()
 
-html_str = '';
+html_str = '<div class="closer-x-button"><i class="fas fa-times-circle"></i></div>';
 for (i = 0; i < headings.length; i++) {
     dir = `${i+1} ${headings[i]}`;
     if (slides[i] == 0) {
