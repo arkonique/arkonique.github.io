@@ -226,7 +226,7 @@ for (i = 0; i < headings.length; i++) {
     if (slides[i] == 0) {
         html_str = `${html_str}<h2>${headings[i]}</h2><div class="photobox">`;
         for (j = 0; j < photos[i].length; j++) {
-            html_str = `${html_str}<div><div><img src="gallery/${dir}/${photos[i][j]}"></div></div>`
+            html_str = `${html_str}<div><div><img src="gallery/${dir}/${photos[i][j]}" tabindex=0 /></div></div>`
         }
     }
     else{
@@ -234,7 +234,7 @@ for (i = 0; i < headings.length; i++) {
         for (let j = 0; j < photos[i].length; j++) {
             img = photos[i][j]
             html_str = `${html_str}
-        <li><div style="width: 100%; height: ${h}px"><img src="gallery/${dir}/${img}" /></div></li>
+        <li><div style="width: 100%; height: ${h}px"><img src="gallery/${dir}/${img}" tabindex=0 /></div></li>
         `
         }
     }
