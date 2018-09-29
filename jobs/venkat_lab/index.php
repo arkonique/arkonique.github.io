@@ -1,3 +1,7 @@
+<?php
+require_once('scripts/gallery.php')
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -133,6 +137,7 @@
             <h1><span class="raled">GALLERY</span></h1>
         </div>
         <div class="ga-mid source">
+
         </div>
         <div class="foot">
             <div>
@@ -199,11 +204,14 @@
     </article>
     <!------------------------------------------ Scripts --------------------------------------------------------------------------------->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <script src="js/jquery-gallery.js" type="text/javascript"></script>
     <script src="js/markdown.js"></script>
     <script src="txt/text.js"></script>
     <script src="txt/group.js"></script>
     <script src="txt/images.js"></script>
+    <script type="text/javascript" src="js/gallery.json"></script>
+    <script type="text/javascript" src="gallery/a.json"></script>
     <script src="js/main.js"></script>
 </body>
 

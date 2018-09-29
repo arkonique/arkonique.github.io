@@ -92,7 +92,7 @@ $('#query-form').submit(function(event) {
     }
     $.ajax({
         type: 'POST',
-        url: 'mail.php',
+        url: 'scripts/mail.php',
         data: formData,
         dataType: 'json',
         encode: true
@@ -213,3 +213,18 @@ for (i = 0; i < alumni.length; i++) {
 $('.alumni').html(html_str)
 
 $('.co-mid').html(markdown.toHTML(collaborators))
+
+headings=JSON.parse(headings);
+photos=JSON.parse(photos);
+slides=JSON.parse(slideshow);
+html_str='';
+for (i=0;i<headings.length;i++) {
+    dir=`${i+1} ${headings[i]}`;
+    html_str=`${html_str}<h2>${headings[i]}</h2><div class="photobox">`;
+    for (j=0;j<photos[i].length;j++) {
+        html_str=`${html_str}<div><div><img src="gallery/${dir}/${photos[i][j]}"></div></div>`
+    }
+    html_str=`${html_str}</div><hr>`
+}
+
+$('.ga-mid').html(html_str);
