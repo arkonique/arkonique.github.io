@@ -689,7 +689,8 @@ textarea:focus {
 }
 
 .ga-mid h2 {
-    width: 15%;
+    width: 13%;
+    padding: 15px;
     border-right: 1px solid #e2e2e2;
     box-sizing: border-box;
     color: var(--primary-color);
