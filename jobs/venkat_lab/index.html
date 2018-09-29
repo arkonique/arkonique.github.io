@@ -1,7 +1,6 @@
 <!--?php
 require_once('scripts/gallery.php')
 ?-->
-
 <!DOCTYPE html>
 <html>
 
@@ -49,15 +48,15 @@ require_once('scripts/gallery.php')
             <a href="https://www.facebook.com/DrVenkataramananResearchGroup/"><i class="fab fa-facebook-f"></i></a>
         </ul>
     </nav>
-        <nav class="top-menu-mobile">
+    <nav class="top-menu-mobile">
         <div class="tag-logo">
             <span class="raled">Nano Materials Research Lab</span>
             <br>
             <span class="monster">@IISER Kolkata</span>
         </div>
-            <div class="hamburger">
-                <i class="fas fa-bars"></i>
-            </div>
+        <div class="hamburger" tabindex="0">
+            <i class="fas fa-bars"></i>
+        </div>
         <ul>
             <li id="home" class="menu-items now"><img src="img/home.svg"></li>
             <li class="menu-items" id="research">Research</li>
@@ -78,6 +77,9 @@ require_once('scripts/gallery.php')
             <div class="left"></div>
             <div class="right"></div>
             <div class="slideshow">
+                <ul></ul>
+            </div>
+            <div class="slideshow-m">
                 <ul></ul>
             </div>
         </div>
@@ -159,7 +161,6 @@ require_once('scripts/gallery.php')
         </div>
         <div class="closer-x-button"><i class="fas fa-times-circle"></i></div>
         <div class="ga-mid source">
-
         </div>
         <div class="foot">
             <div>
@@ -210,7 +211,12 @@ require_once('scripts/gallery.php')
                 <div class="mapouter">
                     <div class="gmap_canvas">
                         <iframe width="600" height="350" id="gmap_canvas" src="https://maps.google.com/maps?q=IISER%20Kolkata&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                        <a href="https://www.pureblack.de"></a>
+                    </div>
+                </div>
+
+                <div class="mapouter-m">
+                    <div class="gmap_canvas-m">
+                        <iframe width="300" height="350" id="gmap_canvas" src="https://maps.google.com/maps?q=IISER%20Kolkata&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                     </div>
                 </div>
             </div>

@@ -340,23 +340,31 @@ li {
     background: #f3f3f3;
 }
 
-.slideshow {
+.slideshow,
+.slideshow-m {
     position: relative;
     margin: 10px 0;
 }
 
-.slideshow img {
+.slideshow img,
+.slideshow-m img {
     height: 100%;
 }
 
-.slideshow div {
+.slideshow div,
+.slideshow-m div {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.slideshow li {
+.slideshow li,
+.slideshow-m li {
     overflow: hidden;
+}
+
+.slideshow-m {
+    display: none;
 }
 
 .foot {
@@ -506,19 +514,27 @@ textarea:focus {
     cursor: pointer;
 }
 
-.mapouter {
+.mapouter,.mapouter-m {
     text-align: right;
     height: 350px;
     width: 600px;
 }
 
-.gmap_canvas {
+.gmap_canvas,.gmap_canvas-m {
     overflow: hidden;
     background: none!important;
     height: 500px;
     width: 600px;
 }
 
+
+.mapouter-m,.gmap_canvas-m {
+    width: 300px;
+}
+
+.mapouter-m {
+    display: none;
+}
 
 .head-card {
     padding: 30px;
@@ -666,6 +682,13 @@ textarea:focus {
 }
 
 
+
+
+
+
+
+
+
 /*
 .grid-item {
     width: 200px;
@@ -705,7 +728,8 @@ textarea:focus {
     width: 100%;
 }
 
-.photobox,.slidebox {
+.photobox,
+.slidebox {
     width: 85%;
     display: flex;
     align-items: center;
@@ -738,11 +762,12 @@ textarea:focus {
 .slidebox ul {
     position: relative;
 }
-.slidebox li{
+
+.slidebox li {
     overflow: hidden;
 }
 
-.photobox>div>div:focus{
+.photobox>div>div:focus {
     width: 100%;
     height: 100%;
     background: #0000006c;
@@ -775,4 +800,186 @@ textarea:focus {
     display: none;
     z-index: 50000000000;
     cursor: pointer;
+}
+
+.top-menu-mobile {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .top-menu {
+        display: none;
+    }
+
+    .top-menu-mobile {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        width: 100%;
+        border-radius: 0;
+        height: 50px;
+    }
+
+    nav>ul {
+        display: none;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 50%;
+        background: white;
+    }
+
+    nav>ul>li {
+        background: white;
+        width: 100%;
+    }
+
+    nav>ul>a {
+        background: white;
+        width: 100%;
+    }
+
+    .hamburger {
+        cursor: pointer;
+        height: 100%;
+        width: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hamburger:focus+ul {
+        display: block;
+    }
+
+    .top {
+        padding: 30px;
+        box-sizing: border-box;
+        height: 60%;
+    }
+
+    .top h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .left {
+        width: 100%;
+        padding: 50px;
+    }
+    .right {
+        width: 100%;
+    }
+
+    .slideshow {
+        display: none;
+    }
+
+    .slideshow-m {
+        display: block;
+        margin: 0;
+    }
+
+    .r-mid {
+        padding: 30px
+    }
+
+    .r-mid img {
+        margin: 20px 0px;
+        width: 100%;
+    }
+
+    .p-mid ul {
+        width: 80%;
+    }
+
+    .p-mid h2 {
+        width: 20%;
+    }
+
+    .p-mid img {
+        width: 90%;
+        padding: 0 5%;
+    }
+
+    .head-card {
+        margin: 17px;
+        width: 90%;
+        height: 200vh;
+    }
+
+    .info-wrapper-l,
+    .info-wrapper-r {
+        width: 100%;
+    }
+
+    .image-wrapper {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin: 0 auto;
+    }
+
+    .card {
+        width: 100%;
+        height: auto;
+        flex-flow: wrap
+    }
+
+    .card .card-img {
+        width: 100%
+    }
+
+    .card .card-info {
+        width: 100%
+    }
+
+
+    .ga-mid {
+        padding: 0;
+    }
+
+    .ga-mid h2 {
+        width: 100%;
+        border: none;
+        text-align: center;
+    }
+
+    .photobox,
+    .slidebox {
+        width: 100%;
+        padding: 0
+    }
+
+    .photobox>div {
+        width: 45vw;
+        height: 45vw;
+        box-shadow: 0 3px 5px;
+    }
+
+    .co-mid {
+        padding: 30px;
+    }
+
+    .c-mid {
+        padding: 30px;
+    }
+
+    .left-form,
+    .right-info {
+        width: 100%;
+    }
+
+    .mapouter {
+        display: none;
+    }
+
+    .mapouter-m {
+        display: block;
+    }
+
+    .closer-x-button{
+        top: 70px;
+        right: 10px;
+    }
 }

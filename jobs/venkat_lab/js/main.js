@@ -79,6 +79,26 @@ $('.slideshow>ul').slideshow({
     height: h
 });
 
+
+w = $(document).width()
+h = $(document).height()*0.5
+
+html_str = ''
+for (let i = 0; i < image_list.length; i++) {
+    img = image_list[i]
+    html_str = `${html_str}
+<li><div style="width: 100%; height: ${h}px"><img src="img/${img}" /></div></li>
+`
+}
+
+$('.slideshow-m>ul').html(html_str);
+$('.slideshow-m>ul').slideshow({
+    interval: 10000,
+    width: w,
+    height: h
+});
+
+
 $('.r-mid').html(markdown.toHTML(research_content))
 $('.p-mid').html(markdown.toHTML(publication_list))
 $('.current-email').html(markdown.toHTML(email))
@@ -106,7 +126,7 @@ $('#query-form').submit(function(event) {
 })
 
 
-$('.supervisor').html('<div class="head-card"><div class="info-wrapper"><h2 class="title"></h2><h2 class="name"></h2><div class="info-wrapper-l"><p class="emails"></p><p class="positions"></p></div><div class="info-wrapper-r"><p class="qualifications"></p></div></div><div class="image-wrapper"></div></div>')
+$('.supervisor').html('<div class="head-card"><div class="info-wrapper"><h2 class="title"></h2><h2 class="name"></h2><div class="image-wrapper"></div><div class="info-wrapper-l"><p class="emails"></p><p class="positions"></p></div><div class="info-wrapper-r"><p class="qualifications"></p></div></div></div>')
 $('.supervisor .head-card .title').html(head_card.title)
 $('.supervisor .head-card .name').html(head_card.name)
 
@@ -219,11 +239,11 @@ photos = JSON.parse(photos);
 slides = JSON.parse(slideshow);
 w = $(document).width()*0.7
 h = $(document).height()
-
+var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 html_str = '<div class="closer-x-button"><i class="fas fa-times-circle"></i></div>';
 for (i = 0; i < headings.length; i++) {
     dir = `${i+1} ${headings[i]}`;
-    if (slides[i] == 0) {
+    if (slides[i] == 0 || width < 600) {
         html_str = `${html_str}<h2>${headings[i]}</h2><div class="photobox">`;
         for (j = 0; j < photos[i].length; j++) {
             html_str = `${html_str}<div><div tabindex=0><img src="gallery/${dir}/${photos[i][j]}"/></div></div>`
@@ -237,6 +257,7 @@ for (i = 0; i < headings.length; i++) {
         <li><div style="width: 100%; height: ${h}px"><img src="gallery/${dir}/${img}" /></div></li>
         `
         }
+        html_str=`${html_str}</ul>`
     }
     html_str = `${html_str}</div><hr>`
 
@@ -259,4 +280,14 @@ $('.photobox>div>div').focus(function(){
 $('.closer-x-button').click(function(){
     $('.photobox>div>div').blur();
     $('.top-menu').css('z-index',10000000);
+    $('.closer-x-button').css('display','none');
+
+})
+
+
+let c=0;
+$('.hamburger').click(function(){
+    c++;
+    if (c%2!=0) {$('.top-menu-mobile>ul').css('display','block')}
+    else {$('.top-menu-mobile>ul').css('display','none')}
 })
