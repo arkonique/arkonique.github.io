@@ -730,9 +730,11 @@ textarea:focus {
 
 .slidebox ul {
     position: relative;
+}
+.slidebox li{
     overflow: hidden;
 }
-
+}
 .slidebox img {
     width: 100%;
 }
