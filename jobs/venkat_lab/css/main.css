@@ -700,6 +700,10 @@ textarea:focus {
     border: 0.5px solid #e2e2e2;
 }
 
+.ga-mid img {
+    width: 100%;
+}
+
 .photobox,.slidebox {
     width: 85%;
     display: flex;
@@ -734,7 +738,4 @@ textarea:focus {
 .slidebox li{
     overflow: hidden;
 }
-}
-.slidebox>ul>li>div>img {
-    width: 100%;
 }
