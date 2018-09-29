@@ -735,6 +735,6 @@ textarea:focus {
     overflow: hidden;
 }
 }
-.slidebox img {
+.slidebox>ul>li>div>img {
     width: 100%;
 }
