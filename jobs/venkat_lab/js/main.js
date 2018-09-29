@@ -217,7 +217,7 @@ $('.co-mid').html(markdown.toHTML(collaborators))
 headings = JSON.parse(headings);
 photos = JSON.parse(photos);
 slides = JSON.parse(slideshow);
-w = $(document).width()*0.7-20
+w = $(document).width()*0.7
 h = $(document).height()
 
 html_str = '';
@@ -243,12 +243,6 @@ for (i = 0; i < headings.length; i++) {
 }
 
 $('.ga-mid').html(html_str);
-
-
-
-
-
-
 
 
 $('.slidebox>ul').slideshow({
