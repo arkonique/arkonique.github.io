@@ -177,7 +177,7 @@ for (i = 0; i < alumni.length; i++) {
             html_str = `${html_str}Position: <strong>${alumni[i].position}</strong><br>`;
         }
     }
-    if (alumni[i].current_position != null){
+    if (alumni[i].current_position != null) {
         if (alumni[i].current_position.length > 0) {
             html_str = `${html_str}Current Position: <strong>${alumni[i].current_position}</strong><br>`;
         }
@@ -214,17 +214,45 @@ $('.alumni').html(html_str)
 
 $('.co-mid').html(markdown.toHTML(collaborators))
 
-headings=JSON.parse(headings);
-photos=JSON.parse(photos);
-slides=JSON.parse(slideshow);
-html_str='';
-for (i=0;i<headings.length;i++) {
-    dir=`${i+1} ${headings[i]}`;
-    html_str=`${html_str}<h2>${headings[i]}</h2><div class="photobox">`;
-    for (j=0;j<photos[i].length;j++) {
-        html_str=`${html_str}<div><div><img src="gallery/${dir}/${photos[i][j]}"></div></div>`
+headings = JSON.parse(headings);
+photos = JSON.parse(photos);
+slides = JSON.parse(slideshow);
+w = $(document).width()*0.7-20
+h = $(document).height()
+
+html_str = '';
+for (i = 0; i < headings.length; i++) {
+    dir = `${i+1} ${headings[i]}`;
+    if (slides[i] == 0) {
+        html_str = `${html_str}<h2>${headings[i]}</h2><div class="photobox">`;
+        for (j = 0; j < photos[i].length; j++) {
+            html_str = `${html_str}<div><div><img src="gallery/${dir}/${photos[i][j]}"></div></div>`
+        }
     }
-    html_str=`${html_str}</div><hr>`
+    else{
+        html_str=`${html_str}<h2>${headings[i]}</h2><div class="slidebox"><ul>`;
+        for (let j = 0; j < photos[i].length; j++) {
+            img = photos[i][j]
+            html_str = `${html_str}
+        <li><div style="width: 100%; height: ${h}px"><img src="gallery/${dir}/${img}" /></div></li>
+        `
+        }
+    }
+    html_str = `${html_str}</div><hr>`
+
 }
 
 $('.ga-mid').html(html_str);
+
+
+
+
+
+
+
+
+$('.slidebox>ul').slideshow({
+    interval: 10000,
+    width: w,
+    height: h
+});
