@@ -542,21 +542,32 @@ textarea:focus {
     width: 96%;
     position: relative;
     box-sizing: border-box;
-    height: 90vh;
     box-shadow: 0 3px 10px #0000002c;
     border-radius: 13px;
 }
 
+.info-wrapper {
+    display: flex;
+    flex-flow: wrap;
+    width: 100%;
+}
+
+
+.info-wrapper > h2 {
+    width: 100%;
+}
+
+
+
+
 .info-wrapper-l {
     width: 50%;
-    float: left;
     padding-right: 20px;
     box-sizing: border-box;
 }
 
 .info-wrapper-r {
     width: 50%;
-    float: left;
     text-align: left;
     margin-top: 40px;
 }

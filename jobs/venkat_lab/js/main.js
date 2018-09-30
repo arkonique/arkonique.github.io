@@ -1,3 +1,4 @@
+let c=0;
 $('.menu-items').click(function() {
     let x = $(this).attr('id')
     $('.menu-items').removeClass('now')
@@ -5,7 +6,15 @@ $('.menu-items').click(function() {
     let y = `.${x}`
     $('.page').removeClass('selected')
     $(y).addClass('selected')
-    //window.history.pushState("string", "Nano Materials research Lab @IISER Kolkata", x)
+    c++;
+    $('.top-menu-mobile>ul').css('display','none')
+
+})
+
+$('.hamburger').click(function(){
+    c++;
+    if (c%2!=0) {$('.top-menu-mobile>ul').css('display','block')}
+    else {$('.top-menu-mobile>ul').css('display','none')}
 })
 
 
@@ -282,12 +291,4 @@ $('.closer-x-button').click(function(){
     $('.top-menu').css('z-index',10000000);
     $('.closer-x-button').css('display','none');
 
-})
-
-
-let c=0;
-$('.hamburger').click(function(){
-    c++;
-    if (c%2!=0) {$('.top-menu-mobile>ul').css('display','block')}
-    else {$('.top-menu-mobile>ul').css('display','none')}
 })
