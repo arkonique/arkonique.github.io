@@ -1,3 +1,6 @@
+//Slideshow images
+let image_list=["1818948_orig.jpg","8530811_orig.jpg","9206974_orig.jpg"]
+
 let research_interests=`
 **Our group's research interests encompass the following topics:**
 
@@ -131,7 +134,7 @@ let collaborators = `
 
 -   **Name:** Dr. Vivek Polshettiwar
 
-    **Position:** Associate Professor 
+    **Position:** Associate Professor
 
     **Address:** Department of Chemical Sciences, TIFR-Mumbai, Mumbai, India.
 
@@ -151,7 +154,7 @@ let collaborators = `
 
     **Position:** Scientist F, Chemistry Division
 
-    **Address:** Bhabha Atomic Research Centre, Mumbai, 400085, India. 
+    **Address:** Bhabha Atomic Research Centre, Mumbai, 400085, India.
 
     **E mail:** vsudar@barc.gov.in
 
