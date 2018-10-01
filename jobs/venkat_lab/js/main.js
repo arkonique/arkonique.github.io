@@ -298,6 +298,17 @@ $('.menu-items').click(function(){
 
 		ga_loaded=1;
 
+		$('.photobox>div>div').focus(function(){
+		    $('.top-menu').css('z-index','1');
+		    $('.closer-x-button').css('display','flex');
+		})
+
+		$('.closer-x-button').click(function(){
+		    $('.photobox>div>div').blur();
+		    $('.top-menu').css('z-index',10000000);
+		    $('.closer-x-button').css('display','none');
+
+		})
 	}
 	if ($(this).attr('id')=="collaborators" && co_loaded==0){$('.co-mid').html(markdown.toHTML(collaborators));co_loaded=1;}
 
@@ -306,14 +317,3 @@ $('.menu-items').click(function(){
 
 
 
-$('.photobox>div>div').focus(function(){
-    $('.top-menu').css('z-index','1');
-    $('.closer-x-button').css('display','flex');
-})
-
-$('.closer-x-button').click(function(){
-    $('.photobox>div>div').blur();
-    $('.top-menu').css('z-index',10000000);
-    $('.closer-x-button').css('display','none');
-
-})
