@@ -1,12 +1,12 @@
 <?php
 require_once('scripts/gallery.php')
 ?>
-
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="ISO-8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Nano Materials research Lab @IISER Kolkata</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100|Raleway:700|Source+Sans+Pro:300" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
@@ -48,6 +48,26 @@ require_once('scripts/gallery.php')
             <a href="https://www.facebook.com/DrVenkataramananResearchGroup/"><i class="fab fa-facebook-f"></i></a>
         </ul>
     </nav>
+    <nav class="top-menu-mobile">
+        <div class="tag-logo">
+            <span class="raled">Nano Materials Research Lab</span>
+            <br>
+            <span class="monster">@IISER Kolkata</span>
+        </div>
+        <div class="hamburger" tabindex="0">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul>
+            <li id="home" class="menu-items now"><img src="img/home.svg"></li>
+            <li class="menu-items" id="research">Research</li>
+            <li class="menu-items" id="publications">Publications</li>
+            <li class="menu-items" id="group">Group</li>
+            <li class="menu-items" id="gallery">Gallery</li>
+            <li class="menu-items" id="collaborators">Collaborators</li>
+            <li class="menu-items" id="contact">Contact</li>
+            <a href="https://www.facebook.com/DrVenkataramananResearchGroup/"><i class="fab fa-facebook-f"></i></a>
+        </ul>
+    </nav>
     <!------------------------------------------------- Home Page ------------------------------------------------------------------>
     <article class="page home selected">
         <div class="top h-top">
@@ -57,6 +77,9 @@ require_once('scripts/gallery.php')
             <div class="left"></div>
             <div class="right"></div>
             <div class="slideshow">
+                <ul></ul>
+            </div>
+            <div class="slideshow-m">
                 <ul></ul>
             </div>
         </div>
@@ -138,7 +161,6 @@ require_once('scripts/gallery.php')
         </div>
         <div class="closer-x-button"><i class="fas fa-times-circle"></i></div>
         <div class="ga-mid source">
-
         </div>
         <div class="foot">
             <div>
@@ -189,7 +211,12 @@ require_once('scripts/gallery.php')
                 <div class="mapouter">
                     <div class="gmap_canvas">
                         <iframe width="600" height="350" id="gmap_canvas" src="https://maps.google.com/maps?q=IISER%20Kolkata&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                        <a href="https://www.pureblack.de"></a>
+                    </div>
+                </div>
+
+                <div class="mapouter-m">
+                    <div class="gmap_canvas-m">
+                        <iframe width="300" height="350" id="gmap_canvas" src="https://maps.google.com/maps?q=IISER%20Kolkata&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                     </div>
                 </div>
             </div>
