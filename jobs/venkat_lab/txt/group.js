@@ -1,3 +1,4 @@
+/*----------------------------------- Supervisor ---------------------------------*/
 let head_card={
 	title: "Group Supervisor",
 	name: "Dr. Venkatramanan Mahalingam",
@@ -7,6 +8,8 @@ let head_card={
 	qualifications: ["B. Sc.,Chemistry, American College, Madurai, (1994)","M. Sc., Chemistry, American College, Madurai, (1996)","PhD, Chemistry, under Prof. T. Pradeep, Indian Institute of Technology, Madras (IIT-M), (2001)","Post doctoral scholar, under Prof. D. N. Reinhoudt, University of Twente, Netherlands (Oct 2001-Oct 2003)","Post doctoral Fellow, under Prof. FCJM van Veggel, University of Victoria, Canada (April 2004-April 2007)","Post doctoral Associate, under Prof. John. A. Capobianco, Concordia University, Canada (May 2007- April, 2009)","Visiting Faculty, University of Denver, Colorado, USA  (July -August 2012)"]
 }
 
+/*----------------------------------- Postdocs -----------------------------------*/
+
 let postdocs=[
 {
 	name: "Dr. Sourav Ghosh",
@@ -15,6 +18,7 @@ let postdocs=[
 	topic: "Fabrication of porous transition metal oxide nano-structure for next generation sodium ion batteries and super-capacitors",
 	profile: "Ph.D., CGCRI",
 	email: "sourav.g1989@gmail.com",
+	contact: "",
 	photo: "sourav-ghosh.jpg"
 },
 {
@@ -24,10 +28,13 @@ let postdocs=[
 	topic: "Metal oxide thin films for solar cell and photoelectrochemical water splitting applications",
 	profile: "Ph.D., IIT (ISM) Dhanbad",
 	email: "mchakraborty1988@gmail.com",
+	contact: "",
 	photo: "mahuya.jpg"
 }
 ]
 
+
+/*------------------------------------- PHDs ----------------------------------*/
 
 let phds=[
 {
@@ -92,6 +99,8 @@ let phds=[
 }
 ]
 
+/*------------------------------------- IPhDs --------------------------------------*/
+
 let iphds=[
 {
 	name: "Debashrita Sarkar",
@@ -115,6 +124,8 @@ let iphds=[
 }
 ]
 
+/*-------------------------------------- Project students ------------------------------------*/
+
 let projectstudents=[
 {
 	name: "Rahul Kumar",
@@ -134,6 +145,8 @@ let projectstudents=[
 }
 ]
 
+/*--------------------------------- Visiting Researchers ------------------------------------*/
+
 let visiting=[
 {
 	name: "Dr. Amlan Kumar Pal",
@@ -145,6 +158,8 @@ let visiting=[
 	photo: "importedprofilephoto.jpg"
 }
 ]
+
+/*--------------------------------------- Alumni -------------------------------------------*/
 
 let alumni=[
 {

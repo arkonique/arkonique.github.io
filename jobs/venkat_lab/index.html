@@ -9,7 +9,7 @@ require_once('scripts/gallery.php')
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#73d0f4">
     <title>Nano Materials research Lab @IISER Kolkata</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:100|Raleway:700|Source+Sans+Pro:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100|Raleway:700|Source+Sans+Pro:400" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link href="css/jquery-gallery.css" type="text/css" rel="stylesheet" />
     <link href="css/main.css" type="text/css" rel="stylesheet" />

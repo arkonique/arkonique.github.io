@@ -1,3 +1,4 @@
+/*------------------- Home Page ---------------------------*/
 //Slideshow images
 let image_list=["1818948_orig.jpg","8530811_orig.jpg","9206974_orig.jpg"]
 
@@ -7,15 +8,18 @@ let research_interests=`
 - Synthesis of Ln3+ ion doped nanocrystals and their utilization in sensing, phosphors and NIR active photocatalytic materials
 - Synthesis of metal free polymeric materials for CO2 utilization
 - Porous materials for metal ion and toxicant removal from water bodies
-- Electrochemical and Photoelectrochemical water splitting`
+- Electrochemical and Photoelectrochemical water splitting
+`
 
 let advertisements=`
 ## Advertisements
 
 - Currently there is no research position available in the group. However, interested candidates with personal funding can directly mail Dr. Venkataramanan Mahalingam.
-
 `
 
+
+
+/*--------------------- Research Page ------------------------*/
 let research_content=`
 1. We investigate structural and optical characteristics of lanthanide-doped luminescence nanomaterials, such as oxides, fluorides, oxyfluorides, sulfates, etc. We use a wide range of synthetic methods like sol-gel, thermal decomposition, microwave and hydrothermal to make these nanomaterials. We utilize the developed materials for various applications, such as metal ion and molecular sensing, bioimaging, etc.
 ![img-1](img/1453885742.png)
@@ -27,11 +31,8 @@ let research_content=`
 
 ![img-3](img/toc-in-tiff-large.jpg)
 `
-let email="mvenkatramanan@yahoo.com"
-let physicaladdr=`Indian Institute of Science Education and Research Kolkata,
 
-​Mohanpur, Nadia, West Bengal`
-
+/*----------------- Publications Page ----------------------*/
 let publication_list=`
 ![GdF3 Nanocrystals](img/1_2_orig.jpg)
 # FULL PUBLICATION LIST (according to date of acceptance)
@@ -55,12 +56,12 @@ let publication_list=`
 - 58. A Luminescent Nanocrystal Marker for the Selective and Ultrasensitive Detection of Explosives. S. Sarkar*, L. Graña‐Suárez, W. Verboom, V. Mahalingam and J. Huskens*, Chem. Nano Mat., 2016, 2 (8), 805-809.
 ​- 57. Ce3+ sensitized bright white light emission from colloidal Ln3+ doped CaF2 nanocrystals for the development of transparent nanocomposites. V. N. K. B. Adusumalli, H. V. S. R. M. Koppisetti and V. Mahalingam*, J. Mater. Chem. C, 2016, 4, 2289-2294.
 - 56. Double Bond Terminated Ln3+ doped LiYF4 NCs with Strong Single Band NIR Emission: Simple Click Chemistry Route to Make Water Dispersible Nanocrystals with Various Functional Groups. B. meesaragandla, D. Sarkar, V. N. K. B. Adusumalli and  V. Mahalingam*, N. J. Chem, 2016, 40, 3080-3085.
-- 55. A Highly Efficient UV–Vis–NIR Active Ln3+-Doped BiPO4/BiVO4 Nanocomposite for Photocatalysis Application. S. Ganguli, C. Hazra, M. Chatti, T. Samanta and V. Mahalingam*, Langmuir, 2016, 32 (1). 247-253.
+- 55. A Highly Efficient UV–Vis–NIR Active Ln<sup>3+-</sup>Doped BiPO4/BiVO4 Nanocomposite for Photocatalysis Application. S. Ganguli, C. Hazra, M. Chatti, T. Samanta and V. Mahalingam*, Langmuir, 2016, 32 (1). 247-253.
 - 54. Synthesis of Hexagonal Phase Eu3+-Doped GdF3 Nanocrystals above Room Temperature by Controlling the Viscosity of the Solvents. T. Samanta, C. Hazra, A. E. Praveen, S. Ganguli and V. Mahalingam*, Eur. J. Inorg. Chem., 2016, 6, 802-807.
 ​- 53. Enhanced visible and near infrared emissions via Ce3+ to Ln3+ energy transfer in Ln3+-doped CeF3 nanocrystals (Ln = Nd and Sm). T. samanta, S.Sarkar, V. N. K. B Adusumalli, A. E. Praveen and V. Mahalingam*, Dalton Trans., 2016, 45, 78-84.
 
 ## 2015
-- 52. Highly Selective and Sensitive Detection of Cu2+ Ions Using Ce(III)/Tb(III)-Doped SrF2 Nanocrystals as Fluorescent Probe. S. Sarkar, M. Chatti, V.N.K.B. Adusumalli and V. Mahalingam*, ACS Appl Mater Interfaces, 2015, 7, 46, 25702-25708.
+- 52. Highly Selective and Sensitive Detection of Cu2+ Ions Using Ce(III)/Tb(III)-Doped SrF<sub>2</sub> Nanocrystals as Fluorescent Probe. S. Sarkar, M. Chatti, V.N.K.B. Adusumalli and V. Mahalingam*, ACS Appl Mater Interfaces, 2015, 7, 46, 25702-25708.
 - 51. Synthesis of Upconverting Hydrogel Nanocomposites Using Thiol-Ene Click Chemistry: Template for the Formation of Dendrimer-Like Gold Nanoparticle Assemblies. B. Meesaragandla and V. Mahalingam*, Chem. Eur. J., 2015, 21(47), 16811-16817.
 - 50. Glutathione-modified ultrasmall Ce3+ and Tb3+-doped SrF2 nanocrystals for fluorescent determination of Hg(II) and Pb(II) ions. M. Chatti, S. Sarkar and V. Mahalingam*, Microchim. Acta, 2015, 1, 133-140.
 - 49. Intense NIR emissions at 0.8 µm, 1.47 µm, and 1.53 µm from colloidal LiYbF4:Ln3+ (Ln=Tm3+ and Er3+) nanocrystals. S. Sarkar, V. N. K. B. Adusumalli, V. Mahalingam* and J. Capobianco*, ​Phys. Chem. Chem. Phys., 2015, 17, 17577-17583.
@@ -122,48 +123,58 @@ let publication_list=`
 - 1. Self-assembled monolayers of 1,4-benzenedimethanethiol on polycrystalline silver and gold films: an investigation of structure, stability, dynamics and reactivity. K. V. G. K. Murty, V. Mahalingam and T. Pradeep, Langmuir, 1998, 14, 5446-5456.
 `
 
+/*---------------------------- Collaborators Page ------------------------------*/
 let collaborators = `
--   **Name:** Prof. T. Pradeep
+- **Name:** Prof. T. Pradeep
 
-    **Position:** Professor
+ **Position:** Professor
 
-    **Address:** Department of Chemistry, IIT-Madras, Chennai, India.
+ **Address:** Department of Chemistry, IIT-Madras, Chennai, India.
 
-    **E mail:** pradeep@iitm.ac.in
-
-
--   **Name:** Dr. Vivek Polshettiwar
-
-    **Position:** Associate Professor
-
-    **Address:** Department of Chemical Sciences, TIFR-Mumbai, Mumbai, India.
-
-    **E mail:** vivekpol@tifr.res.in
+ **E mail:** pradeep@iitm.ac.in
 
 
--   **Name:** Prof. J. A. Capobianco
+- **Name:** Dr. Vivek Polshettiwar
 
-    **Position:** Professor
+ **Position:** Associate Professor
 
-    **Address:** Department of Chemistry & Biochemistry,  Concordia University, Canada.
+ **Address:** Department of Chemical Sciences, TIFR-Mumbai, Mumbai, India.
 
-    **E mail:** john.capobianco@concordia.ca
-
-
--   **Name:** Dr. Vasanthakumaran Sudarsan
-
-    **Position:** Scientist F, Chemistry Division
-
-    **Address:** Bhabha Atomic Research Centre, Mumbai, 400085, India.
-
-    **E mail:** vsudar@barc.gov.in
+ **E mail:** vivekpol@tifr.res.in
 
 
--   **Name:** Dr. Sri Sivakumar
+- **Name:** Prof. J. A. Capobianco
 
-    **Position:** Assistant Professor
+ **Position:** Professor
 
-    **Address:** Department of  Chemical Engineering, IIT-Kanpur, Kanpur, Uttar Pradesh, India.
+ **Address:** Department of Chemistry & Biochemistry,  Concordia University, Canada.
 
-    **E mail:** srisiva@iitk.ac.in
+ **E mail:** john.capobianco@concordia.ca
+
+
+- **Name:** Dr. Vasanthakumaran Sudarsan
+
+ **Position:** Scientist F, Chemistry Division
+
+ **Address:** Bhabha Atomic Research Centre, Mumbai, 400085, India.
+
+ **E mail:** vsudar@barc.gov.in
+
+
+- **Name:** Dr. Sri Sivakumar
+
+ **Position:** Assistant Professor
+
+ **Address:** Department of  Chemical Engineering, IIT-Kanpur, Kanpur, Uttar Pradesh, India.
+
+ **E mail:** srisiva@iitk.ac.in
+`
+
+
+/*---------------------------------- Contact Page -------------------------------*/
+
+let email="mvenkatramanan@yahoo.com"
+let physicaladdr=`Indian Institute of Science Education and Research Kolkata,
+
+​Mohanpur, Nadia, West Bengal
 `

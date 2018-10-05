@@ -73,7 +73,7 @@ $(".right").html(markdown.toHTML(advertisements))
 
 
 let w = $(document).width() - 20
-let h = $(document).height()
+let h = $(document).height()*0.6
 
 let html_str = ''
 for (let i = 0; i < image_list.length; i++) {
@@ -180,7 +180,7 @@ $('.menu-items').click(function(){
 		$('.supervisor .image-wrapper').html(`<img src='img/${head_card.photo}' />`)
 		html_str_4 = ''
 		for (i = 0; i < postdocs.length; i++) {
-		    html_str_4 = `${html_str_4}<div class="card"><div class="card-img"><img src="img/${postdocs[i].photo}" /></div><div class="card-info">Name: <strong>${postdocs[i].name}</strong><br>Position: <strong>${postdocs[i].position}</strong><br>Duration: <strong>${postdocs[i].duration}</strong><br>Topic: <strong>${postdocs[i].topic}</strong><br>Profile: <strong>${postdocs[i].profile}</strong><br>Email: <strong>${postdocs[i].email}</strong></div></div>`
+		    html_str_4 = `${html_str_4}<div class="card"><div class="card-img"><img src="img/${postdocs[i].photo}" /></div><div class="card-info">Name: <strong>${postdocs[i].name}</strong><br>Position: <strong>${postdocs[i].position}</strong><br>Duration: <strong>${postdocs[i].duration}</strong><br>Topic: <strong>${postdocs[i].topic}</strong><br>Profile: <strong>${postdocs[i].profile}</strong><br>Email: <strong>${postdocs[i].email}</strong><br>Contact: <strong>${postdocs[i].contact}</strong></div></div>`
 		}
 
 		$('.postdoc').html(html_str_4)

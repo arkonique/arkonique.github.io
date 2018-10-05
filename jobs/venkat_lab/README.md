@@ -1,32 +1,55 @@
-# Maintenance Documentation for -------------------------
+# Maintenance Documentation for www.iiserkol.ac.in/mvenkat
 
-This is a website maintenance documentation for ----------------------. This file is available in PDF and MD format in the home directory of the website. [Click here for the PDF version](a) and [click here for the MD/HTML version](a)
+This is a website maintenance documentation for www.iiserkol.ac.in/mvenkat. This file is available in PDF and MD format in the home directory of the website. [Click here for the PDF version](./README.pdf) and [click here for the MD/HTML version](./README.html)
 
 ## Contents
 
-1. Web Technologies **[1-7]**<br>
-    1.1 HTML **[3]**<br>
-    1.2 PHP **[4]**<br>
-    1.3 CSS **[4-5]**<br>
-    1.4 JS, JQuery, JSON & AJAX **[5-6]**<br>
-    1.5 Markdown **[6]**<br>
-    1.6 Other Libraries **[6-7]**<br>
-2. Directory Structure **[7]**<br>
-3. Markdown Tutorial **[8-17]**<br>
-    3.1 Headers **[8-9]**<br>
-    3.2 Emphasis **[9-10]**<br>
-    3.3 Lists **[10-11]**<br>
-    3.4 Links **[11-12]**<br>
-    3.5 Images **[12]**<br>
-    3.6 Code and Syntax Highlighting **[12-13]**<br>
-    3.7 Tables **[14-15]**<br>
-    3.8 Blockquotes **[15]**<br>
-    3.9 Inline HTML **[15]**<br>
-    3.10 Horizontal Rule **[16]**<br>
-    3.11 Line Breaks **[16-17]**<br>
-    3.12 Youtube videos **[17]**<br>
-4. Page Editing <br>
+1. Web Technologies ........................................................................................................................... **3-7**
+    1.1 HTML ............................................................................................................................... **3-4**
+    1.2 PHP .................................................................................................................................. **4-5**
+    1.3 CSS ................................................................................................................................... **5**
+    1.4 JS, JQuery, JSON & AJAX ............................................................................................. **5-7**
+    1.5 Markdown ...................................................................................................................... **7**
+    1.6 Other Libraries ............................................................................................................... **7**
 
+2. Directory Structure .......................................................................................................................... **7-8**
+
+3. Markdown Tutorial ........................................................................................................................ **8-18**
+    3.1 Headers ........................................................................................................................... **9-10**
+    3.2 Emphasis ......................................................................................................................... **10-11**
+    3.3 Lists .................................................................................................................................. **11-12**
+    3.4 Links ................................................................................................................................. **12-13**
+    3.5 Images ............................................................................................................................. **13**
+    3.6 Code and Syntax Highlighting .................................................................................... **13-14**
+    3.7 Tables .............................................................................................................................. **14-15**
+    3.8 Blockquotes .................................................................................................................... **15-16**
+    3.9 Inline HTML .................................................................................................................... **16**
+    3.10 Horizontal Rule ............................................................................................................ **16-17**
+    3.11 Line Breaks ................................................................................................................... **17**
+    3.12 Youtube videos ............................................................................................................ **17-18**
+
+4. Page Editing .............................................................................................................................. **18-34**
+    4.1 Home Page ..................................................................................................................... **18-20**
+    &emsp;4.1.1 Editing the slideshow ........................................................................................ **19**
+    &emsp;4.1.2 Editing the research and advertisements sections ...................................... **19-20**
+    4.2 Research Page ................................................................................................................. **20-21**
+    4.3 Publications Page ........................................................................................................... **21-22**
+    4.4 Group Page ..................................................................................................................... **22-30**
+    &emsp;4.4.1 Supervisor .......................................................................................................... **23-24**
+    &emsp;4.4.2 Students ............................................................................................................. **24-30**
+    &emsp;&emsp;4.4.2.1 Post Docs ........................................................................................... **24-25**
+    &emsp;&emsp;4.4.2.2 PhDs (Properties are same as IPhDs) ............................................ **25-26**
+    &emsp;&emsp;4.4.2.3 IPhDs (Properties are same as PhDs) ............................................ **26-27**
+    &emsp;&emsp;4.4.2.4 Project Students ............................................................................... **27-28**
+    &emsp;&emsp;4.4.2.5 Visitors ............................................................................................... **28-29**
+    &emsp;&emsp;4.4.2.6 Alumni ............................................................................................... **29-30**
+    4.5 Gallery Page ..................................................................................................................... **30-32**
+    4.6 Collaborators Page ......................................................................................................... **32-33**
+    4.7 Contact Page .................................................................................................................... **33-34**
+5. Appendix: Markdown Cheatsheet ....................................................................................... **35-36**
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 
 
@@ -234,7 +257,7 @@ This is intended as a quick reference and showcase. For more complete info, see 
 
 <a name="headers"/>
 
-## Headers
+### 3.1 Headers
 
 ```no-highlight
 # H1
@@ -270,7 +293,7 @@ Alt-H2
 
 <a name="emphasis"/>
 
-## Emphasis
+### 3.2 Emphasis
 
 ```no-highlight
 Emphasis, aka italics, with *asterisks* or _underscores_.
@@ -293,7 +316,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 
 <a name="lists"/>
 
-## Lists
+### 3.3 Lists
 
 (In this example, leading and trailing spaces are shown with with dots: ⋅)
 
@@ -335,7 +358,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 
 <a name="links"/>
 
-## Links
+### 3.4 Links
 
 There are two ways to create links.
 
@@ -387,7 +410,7 @@ Some text to show that the reference links can follow later.
 
 <a name="images"/>
 
-## Images
+### 3.5 Images
 
 ```no-highlight
 Here's our logo (hover to see the title text):
@@ -413,7 +436,7 @@ Reference-style:
 
 <a name="code"/>
 
-## Code and Syntax Highlighting
+### 3.6 Code and Syntax Highlighting
 
 Code blocks are part of the Markdown spec, but syntax highlighting isn't. However, many renderers -- like Github's and *Markdown Here* -- support syntax highlighting. Which languages are supported and how those language names should be written will vary from renderer to renderer. *Markdown Here* supports highlighting for dozens of languages (and not-really-languages, like diffs and HTTP headers); to see the complete list, and how to write the language names, see the [highlight.js demo page](http://softwaremaniacs.org/media/soft/highlight/test.html).
 
@@ -461,7 +484,7 @@ But let's throw in a <b>tag</b>.
 
 <a name="tables"/>
 
-## Tables
+### 3.7 Tables
 
 Tables aren't part of the core Markdown spec, but they are part of GFM and *Markdown Here* supports them. They are an easy way of adding tables to your email -- a task that would otherwise require copy-pasting from another application.
 
@@ -501,7 +524,7 @@ Markdown | Less | Pretty
 
 <a name="blockquotes"/>
 
-## Blockquotes
+### 3.8 Blockquotes
 
 ```no-highlight
 > Blockquotes are very handy in email to emulate reply text.
@@ -521,7 +544,7 @@ Quote break.
 
 <a name="html"/>
 
-## Inline HTML
+### 3.9 Inline HTML
 
 You can also use raw HTML in your Markdown, and it'll mostly work pretty well.
 
@@ -545,7 +568,7 @@ You can also use raw HTML in your Markdown, and it'll mostly work pretty well.
 
 <a name="hr"/>
 
-## Horizontal Rule
+### 3.10 Horizontal Rule
 
 ```
 Three or more...
@@ -579,7 +602,7 @@ Underscores
 
 <a name="lines"/>
 
-## Line Breaks
+### 3.11 Line Breaks
 
 My basic recommendation for learning how line breaks work is to experiment and discover -- hit &lt;Enter&gt; once (i.e., insert one newline), then hit it twice (i.e., insert two newlines), see what happens. You'll soon learn to get what you want. "Markdown Toggle" is your friend.
 
@@ -604,7 +627,7 @@ This line is only separated by a single newline, so it's a separate line in the 
 
 <a name="videos"/>
 
-## YouTube Videos
+### 3.12 YouTube Videos
 
 They can't be added directly but you can add an image with a link to the video like this:
 
@@ -628,9 +651,599 @@ Referencing a bug by #bugID in your git commit links it to the slip. For example
 
 ## 4. Page Editing
 
-This section seeks to explaing how to edit each of the pages in the website and will mainly concern itself with the three files `group.js` and `text.js` present in the `txt` directory and `a.json` present in the `gallery` directory. This will assume that the reader has a sufficient knowledge of Markdown.
+This section seeks to explain how to edit each of the pages in the website and will mainly concern itself with the three files `group.js` and `text.js` present in the `txt` directory and `a.json` present in the `gallery` directory. This will assume that the reader has a sufficient knowledge of Markdown. **Please make sure you are familiar with the directory structure, so that it is easier for you to understand which files are being edited when**
 
 -------------------
 **If you are not familiar with markdown, go back to the previous section where a tutorial for Markdown is provided. If you don't remember some basics, read the cheatsheet provided with this documentation.**
 
 ------------------
+
+------------------
+**CAUTION:** All of the website content is stored in markdown format inside variables. Changing the variable names will cause the website to break
+
+------------------------
+
+### 4.1 Home Page
+
+The Home Page contains three sections primarily: the research interests, the advertisements and the slideshow. To make any changes to these, you need to open `text.js` present inside the directory `txt`.
+
+#### 4.1.1 Editing the slideshow
+Inside text.js, in the beginning you will find a variable `image_list`:<br>
+
+```javascript
+//Slideshow images
+let image_list=["1818948_orig.jpg","8530811_orig.jpg","9206974_orig.jpg"]
+```
+This line is what makes the slideshow. To add a new image, upload an image to the directory `img`, and then add the name of the image file inside the `[]` brackets with `""` quotation marks around the name of the image and a `,` comma separating each image's name. The order of the image names within this list is the exact order in which the images will appear in the slideshow. So, **for example**, if I want to add a new image called `new.png` as the third slide in the slideshow, as well as remove the current second slide, I would need to upload `new.png` to the img folder, then add `new.png` to the list, so the list would look like this:
+
+```javascript
+["1818948_orig.jpg","9206974_orig.jpg","new.png"]
+```
+
+Adding another image `new2.gif` as the first image would make the list like this *(The image needs to be uploaded first)*:
+
+```javascript
+["new2.gif","1818948_orig.jpg","9206974_orig.jpg","new.png"]
+```
+
+Thus the basic steps for editing the slideshow are:
+
+1. Upload the image you want to the directory `img`
+2. Open `txt/text.js` and edit the line containing `image_list` and add the image filename at whichever position you want inside the list *(Everything inside the `[]` square brackets is inside the list)*
+
+#### 4.1.2 Editing the research and advertisements sections
+
+These two sections are written in pure markdown and will support any valid markdown. These two sections are also edited from the `text.js` file
+
+1. To edit the research interests section:
+
+    There is a variable called `research_interests` in the `text.js` file. This variable stores the research interests section and looks like this:
+    ```javascript
+    let research_interests=`
+    **Our group's research interests encompass the following topics:**
+
+    - Synthesis of Ln3+ ion doped nanocrystals and their utilization in sensing, phosphors and NIR active photocatalytic materials
+    - Synthesis of metal free polymeric materials for CO2 utilization
+    - Porous materials for metal ion and toxicant removal from water bodies
+    - Electrochemical and Photoelectrochemical water splitting
+    `
+    ```
+    As you can see, the first line is **bold** and the next few lines are bullets *(If you did not know this, please visit the previous section which explains how to use markdown)*. Any other valid markdown can also be used.
+    **Everything needs to be within the enclosing  ` `` ` (backticks) however**
+
+2. To edit the advertisements section:
+
+    There is a variable called `advertisements` inside `text.js`. This variable stores the advertisements section and looks like this:
+    ```javascript
+    let advertisements=`
+    ## Advertisements
+
+    - Currently there is no research position available in the group. However, interested candidates with personal funding can directly mail Dr. Venkataramanan Mahalingam.
+
+    `
+    ```
+    As you can see, the first line is a 2nd level header, and the next line is a bullet. *(If you did not know this, please visit the previous section which explains how to use markdown)*. Any other valid markdown can also be used.
+    **Everything needs to be within the enclosing  ` `` ` (backticks) however**
+
+### 4.2 Research Page
+
+The research page is written completely in Markdown and is very easy to edit with basic knowledge of markdown.
+
+Inside the `text.js` file, there is a variable called `research _content` which holds the content for the research page and it looks like this:
+
+```javaScript
+let research_content=`
+1. We investigate structural and optical characteristics of lanthanide-doped luminescence nanomaterials, such as oxides, fluorides, oxyfluorides, sulfates, etc. We use a wide range of synthetic methods like sol-gel, thermal decomposition, microwave and hydrothermal to make these nanomaterials. We utilize the developed materials for various applications, such as metal ion and molecular sensing, bioimaging, etc.
+![img-1](img/1453885742.png)
+![img-2](img/8530811_orig.jpg)
+![img-3](img/1284827.gif)
+2. We are working towards developing functional nanocomposites by integrating ultrasmall nanomaterials such as Ln- doped nanocrystals, carbon dots etc. with metal nanoparticles and polymers. Consequently, we study their structural optical and energy transfer properties.
+3. Synthesis of low- cost nanomaterials for energy storage (supercapacitor, electrocatalysts) and photovoltaic application.
+4. We are working on CO2 fixation for the production of value-added chemicals under ambient condition using metal-free polymeric catalyst (e.g., ionic liquids, g-C3N4). To achieve the goal, we are trying to efficiently convert epoxide to cyclic carbonate under ambient CO2 pressure (1.02 atm). Cyclic carbonates are interesting as highly polar aprotic solvent, solvent for lithium ion battery, monomer for polycarbonate etc. Moreover, di-cyclic carbonates could be useful for the preparation of polyurethanes. This could be a potential by-pass of isocyanates for the preparation of polyurethanes.
+
+![img-3](img/toc-in-tiff-large.jpg)
+`
+```
+
+As you can see, the text above contains a numbered list as well as images.  *(If you did not know this, please visit the previous section which explains how to use markdown)*. Any other valid markdown can also be used.
+**Everything needs to be within the enclosing  ` `` ` (backticks) however**
+
+### 4.3 Publications Page
+
+The publications page is also written in pure markdown, but you need to follow a specific format to edit the page correctly. All markdown is **not** valid.
+
+There is a variable called `publication_list` inside text.js. This variable contains all the content of the publications page in markdown format. However a strict format needs to be followed.
+
+The `publication_list` variable looks like this:
+
+```javascript
+let publication_list=`
+![GdF3 Nanocrystals](img/1_2_orig.jpg)
+# FULL PUBLICATION LIST (according to date of acceptance)
+## 2018
+- 70. Rectification and amplification of ionic current in planar graphene/graphene-oxide junctions: An electrochemical diode and transistor. S. K. Jana, S. Banerjee, S. Bayan, H. R. Inta and V. Mahalingam*, J. Phys. Chem. C, 2018, 122, 21, 11378-11384.
+- 69. Host sensitized intense infrared emissions from Ln3+ doped GdVO4 nanocrystas: Ranging from 950 nm to 2000 nm. T. Samanta, A. E. Praveen and V. Mahalingam*, J. Mater. Chem. C, 2018, 6, 4878-4886.
+
+## 2017
+- 68. Ce3+-sensitized Tm3+/Mn2+-doped NaYF4 colloidal nanocrystals: Intense cool white light from a photophor-coated UV LED. V. N. K. B. Adusumalli, H. V. S. R. M. Koppisetti and V. Mahalingam*, Chem. Eur. J., 2017, 23, 18134–18139.
+- 67. CO2 Fixation: g-C3N4 and tetrabutylammonium bromide catalyzed efficient conversion of epoxide under ambient condition. T. Biswas and V. Mahalingam*, New J. Chem., 2017, 41, 14839-14842.
+- 66. Strong  UV Emission from Colloidal Eu2+‐Doped BaSO4 Nanoparticles: A Material for Enhancing the Photocatalytic Activity of Carbon Dots. C. Hazra, T. Samanta, S. Ganguli and V. Mahalingam, Chem. Select, 2017, 2, 5970-5977.
+​- 65. Ligand sensitized strong luminescence from Eu3+ -doped LiYF4 nanocrystals: a photon down-shifting strategy to increase solar- to- current conversion efficiency. T. Samanta, S. K. Jana, A. E. Praveen and V. Mahalingam*, Dalton Trans., 2017, 46, 9646-9653.
+- 64. Tuning the Energy Transfer Efficiency between Ce3+ and Ln3+ Ions (Ln=Tm, Sm, Tb, Dy) by Controlling the Crystal Phase of NaYF4 Nanocrystals. V. N. K. B. Adusumalli, H. V. S. R. M. Koppisetti, S. Ganguli, S. Sarkar and V. Mahalingam*, Chem. Eur. J., 2017, 23, 994–1000.
+
+## 2016
+- 63. Host-Guest and Electrostatic Interaction in Supramolecular Nanoparticles Clusters. L. Graña‐Suárez, W. Verboom, R. J. M. Egberink, S. Sarkar, V. Mahalingam and J. Huskens*, Eur. J. Org. Chem., 2016, 33, 5511–5518.
+- 62. Selective Detection of H2O2 Using para-Phenylenediamine Capped Ce3+/Tb3+-Doped NaYF4 Microrods. B. Meesaragandla, A. Verma, V. Bheemireddy and V. Mahalingam*, Chem. Select, 2016, 1 (15), 4927-4934.
+- 61. A greener approach towards making highly luminescent Ln3+ -doped NaYF4 nanoparticles with ligand-assisted phase control. D. Sarkar, B. Meesaragandla, T. Samanta and V. Mahalingam*, Chem. Select, 2016, 1 (15), 4785-4793.
+.
+.
+.
+`
+
+```
+
+All of the content is enclosed within the ` `` ` backticks. The first line displays an image at the beginning of the page. The second line us used for the heading "FULL PUBLICATION LIST (according to date of acceptance)". These two lines are in markdown format and can be edited in any way you want. Any other valid markdown can also be inserted here.
+
+From the next line starts the publication list. The publication list is also in markdown format, but **a specific format needs to be followed for the page to be displayed correctly**. The format is as follows:
+
+1. The publication year needs to be preceded by two `##` pound signs, followed by a space. i.e. like this: `## year`.
+2. The publication list must start from the next line.
+3. The publication list is in bullet point format. i.e. The line must start with a `-` hyphen, followed by a space, then the publication number, and then the publication details, like this: `- <publication number>. <publication details>` .
+4. Each new publication must start from a new line.
+5. There needs to be an empty line between the publication lists of any two years.
+6. Everything needs to be within the enclosing  ` `` ` (backticks).
+
+### 4.4 Group Page
+
+The group page is perhaps the most complicated page to edt in the entire website. This page is not written in markdown format, but rather uses a JSON format due to the JSON format's easy characterization features. The group page is thus present in a separate file called `group.js` inside the `txt` directory.
+
+To edit the group page, open `txt/group.js`. The file looks like this:
+
+```javascript
+let head_card={
+    title: "Group Supervisor",
+    name: "Dr. Venkatramanan Mahalingam",
+    photo: "1453113520.png",
+    positions: ["Associate Professor (2014-present)","Assistant Professor (2009-2013)","Department of Chemical Sciences,Indian Institute of Science Education and Research Kolkata (IISER K) Mohanpur Campus, Nadia, 741252, West Bengal, India","Editorial Board Member, Scientific Reports"],
+    email: ["mvenkataramanan@yahoo.com","mvenkat@iiserkol.ac.in"],
+    qualifications: ["B. Sc.,Chemistry, American College, Madurai, (1994)","M. Sc., Chemistry, American College, Madurai, (1996)","PhD, Chemistry, under Prof. T. Pradeep, Indian Institute of Technology, Madras (IIT-M), (2001)","Post doctoral scholar, under Prof. D. N. Reinhoudt, University of Twente, Netherlands (Oct 2001-Oct 2003)","Post doctoral Fellow, under Prof. FCJM van Veggel, University of Victoria, Canada (April 2004-April 2007)","Post doctoral Associate, under Prof. John. A. Capobianco, Concordia University, Canada (May 2007- April, 2009)","Visiting Faculty, University of Denver, Colorado, USA  (July -August 2012)"]
+}
+
+let postdocs=[
+{
+    name: "Dr. Sourav Ghosh",
+    position: "Post-doc Fellow (NPDF), IISER Kolkata",
+    duration: "(Aug, 2017)-present",
+    topic: "Fabrication of porous transition metal oxide nano-structure for next generation sodium ion batteries and super-capacitors",
+    profile: "Ph.D., CGCRI",
+    email: "sourav.g1989@gmail.com",
+    photo: "sourav-ghosh.jpg"
+},
+{
+    name: "Dr. Mohua Chakraborty",
+    position: "Post-doc Fellow (NPDF), IISER Kolkata",
+.
+.
+.
+
+```
+
+The file is divided into different sections depending on the type of the members of the group. Adding new members or editing them is very similar for all of them with very minute differences here and there. Each type of member has specific details, which are stored in object (JSON) format. The format is pretty much as follows:
+
+```javascript
+{
+    property: "details",
+    property: "details",
+    .
+    .
+    .
+}
+```
+
+However editing each of the different sections will be explained here one by one.
+
+#### 4.4.1 Supervisor
+
+The supervisor's details are stored inside the variable called `head_card`. **All of the details are enclosed within `{}` curly brackets** and any change must be made inside the curly brackets. Inside the curly brackets there are a number of properties, followed by their details. **Do not edit the property name. Only the property details are to be edited**. **New properties cannot be added**. The available properties are:
+
+1. **title** - to edit the title just change anything inside the `""` double quotes.
+2. **name** - to edit the name (e.g. to change Dr. to Prof.) just change anything inside the `""` double quotes.
+3. **photo** - to change the displyed picture, upload a new photo to the `img` directory and put the name of the file inside the `""` double quotes.
+4. **positions** - the positions are given in a list format. i.e enclosed by `[]` square brackets. All of the positions are present inside the `[]` square brackets, and each position is enclosed within `""` double quotes, with each position separated by a `,` comma. To add a new posititon, put it inside the `[]` square brackets, enclosed by `""` double quotes, and separated from the others by a `,` comma.
+5. **email** - the emails are given in a list format. i.e enclosed by `[]` square brackets. All of the emails are present inside the `[]` square brackets, and each email is enclosed within `""` double quotes, with each email separated by a `,` comma. To add a new email, put it inside the `[]` square brackets, enclosed by `""` double quotes, and separated from the others by a `,` comma.
+6. **qualifications** - the qualifications are given in a list format. i.e enclosed by `[]` square brackets. All of the qualifications are present inside the `[]` square brackets, and each qualification is enclosed within `""` double quotes, with each qualification separated by a `,` comma. To add a new qualification, put it inside the `[]` square brackets, enclosed by `""` double quotes, and separated from the others by a `,` comma.
+
+#### 4.4.2 Students
+
+The students' details are all present in a list format. i.e. enclosed by `[]` square brackets. Each section (i.e. postdocs, phs, etc.) is a list. Each list contains details of each student in object format, i.e. enclosed within `{}` curly brackets. The students' details are enclosed within `{}` curly brackets, with each student separated from the other by a `,` comma. Within the `{}` curly brackets, each type of student has a few specific properties available to them, which can be edited. A property can be left empty, but it needs to be provided even if the details are not available. The properties need to be separated from each other by a `,` comma. e.g - The PhDs section would look like this:
+
+![phds](format-group.png)
+
+Each type of students is enclosed within a list and has a fixed number of properties. The properties will be explained one by one in the succeding sections
+
+##### 4.4.2.1 Post Docs
+
+**Available Properties:**
+- name
+- position
+- duration
+- topic
+- profile
+- email
+- photo
+
+A list of post docs looks like this:
+
+```javascript
+let postdocs=[
+{
+    name: "Dr. Sourav Ghosh",
+    position: "Post-doc Fellow (NPDF), IISER Kolkata",
+    duration: "(Aug, 2017)-present",
+    topic: "Fabrication of porous transition metal oxide nano-structure for next generation sodium ion batteries and super-capacitors",
+    profile: "Ph.D., CGCRI",
+    email: "sourav.g1989@gmail.com",
+    photo: "sourav-ghosh.jpg"
+},
+{
+    name: "Dr. Mohua Chakraborty",
+    position: "Post-doc Fellow (NPDF), IISER Kolkata",
+    duration: "(Oct, 2017)-present",
+    topic: "Metal oxide thin films for solar cell and photoelectrochemical water splitting applications",
+    profile: "Ph.D., IIT (ISM) Dhanbad",
+    email: "mchakraborty1988@gmail.com",
+    photo: "mahuya.jpg"
+}
+]
+```
+
+- To change any detail, change whatever is inside the `""` double quotes.
+- To add a new member, put all of the properties of the student inside `{}` braces **(All of the properties are compulsory, even if they are left empty)**, and put it insisde the enclosing `[]` square brackets, separated from the other students by a comma.
+- The photo needs tobe uploaded into the directory `img`, and the filename of the photo needs to be provided
+
+##### 4.4.2.2 PhDs (Properties are same as IPhDs)
+
+**Available Properties:**
+- name
+- position
+- duration
+- topic
+- profile
+- email
+- contact
+- photo
+
+A list of PhDs looks like this:
+
+```javascript
+let phds=[
+{
+    name: "A.V. N. Kishor Babu",
+    position: "SRF (UGC), IISER Kolkata",
+    duration: "(Jan, 2013)-present",
+    topic: "Lanthanide based luminescent nanomaterials for LED, sensing and bio-applications",
+    profile: "M.Sc., Kakatiya University",
+    email: "kishor.adusumalli8@gmail.com",
+    contact: "07602894385",
+    photo: "3258617.jpg"
+},
+{
+    name: "Tanmoy Biswas",
+    position: "SRF (UGC), IISER Kolkata",
+    duration: "(Feb, 2014)-present",
+    topic: "CO2 fixation into useful chemicals and fuel",
+    profile: "M.Sc., IIT-Kharagpur",
+    email: "biswastanmoy88@gmail.com",
+    contact: "08967730971",
+    photo: "4199023.jpg"
+}
+]
+```
+
+- To change any detail, change whatever is inside the `""` double quotes.
+- To add a new member, put all of the properties of the student inside `{}` braces **(All of the properties are compulsory, even if they are left empty)**, and put it insisde the enclosing `[]` square brackets, separated from the other students by a comma.
+- The photo needs tobe uploaded into the directory `img`, and the filename of the photo needs to be provided
+
+##### 4.4.2.3 IPhDs (Properties are same as PhDs)
+
+**Available Properties:**
+- name
+- position
+- duration
+- topic
+- profile
+- email
+- contact
+- photo
+
+A list of IPhDs looks like this:
+
+
+```javascript
+let iphds=[
+{
+    name: "Debashrita Sarkar",
+    position: "SRF (IISER Fellow), IISER-Kolkata",
+    duration: "(Jul, 2015)-present",
+    topic: "Caltalytic activation of silicate materials",
+    profile: "Integrated MS-Ph.D. student, IISER Kolkata",
+    email: "debashrita1chemistry@gmail.com",
+    contact: "09563165894",
+    photo: "1453204988.png"
+},
+{
+    name: "Khushboo Paliwal",
+    position: "2nd year IPhD Project (IISER Fellow), IISER-Kolkata",
+    duration: "(May, 2018)-present",
+    topic: "CO2 fixation by polymeric materials",
+    profile: "Integrated MS-Ph.D. student, IISER Kolkata",
+    email: "khushboopaliwal@gmail.com",
+    contact: "08788713249",
+    photo: "photo.jpg"
+}
+]
+```
+
+- To change any detail, change whatever is inside the `""` double quotes.
+- To add a new member, put all of the properties of the student inside `{}` braces **(All of the properties are compulsory, even if they are left empty)**, and put it insisde the enclosing `[]` square brackets, separated from the other students by a comma.
+- The photo needs tobe uploaded into the directory `img`, and the filename of the photo needs to be provided
+
+
+##### 4.4.2.4 Project Students
+
+**Available Properties:**
+- name
+- position
+- topic
+- email
+- contact
+- photo
+
+A list of Project Students looks like this:
+
+
+```javascript
+let projectstudents=[
+{
+    name: "Rahul Kumar",
+    position: "4th year Project, IISER-Kolkata",
+    topic: "Ternary metal chalcogenides for electrocatalysis",
+    email: "rkrahulkumar063@gmail.com",
+    contact: "07063265389",
+    photo: "14241476-1087649264651080-2776107237454309044-o.jpeg"
+},
+{
+    name: "Soumik Das",
+    position: "4th year Project, IISER-Kolkata",
+    topic: "Hydrogen evolution reaction using transition metal compounds",
+    email: "soumik.mm@gmail.com",
+    contact: "09831499435",
+    photo: "9459788.jpg"
+}
+]
+```
+
+
+- To change any detail, change whatever is inside the `""` double quotes.
+- To add a new member, put all of the properties of the student inside `{}` braces **(All of the properties are compulsory, even if they are left empty)**, and put it insisde the enclosing `[]` square brackets, separated from the other students by a comma.
+- The photo needs tobe uploaded into the directory `img`, and the filename of the photo needs to be provided
+
+
+##### 4.4.2.5 Visitors
+
+**Available Properties:**
+- name
+- current_position
+- duration
+- topic
+- email
+- contact
+- photo
+
+A list of visitors looks like this:
+
+```javascript
+let visiting=[
+{
+    name: "Dr. Amlan Kumar Pal",
+    current_position: "Leverhulme Early Career Fellow",
+    duration: "(May 2018-July 2018)",
+    topic: "Supramolecular Chemistry and Photophysics",
+    email: "akp5@st-andrews.ac.uk",
+    contact: "+44-7759495542",
+    photo: "importedprofilephoto.jpg"
+}
+]
+```
+
+
+- To change any detail, change whatever is inside the `""` double quotes.
+- To add a new member, put all of the properties of the student inside `{}` braces **(All of the properties are compulsory, even if they are left empty)**, and put it insisde the enclosing `[]` square brackets, separated from the other students by a comma.
+- The photo needs tobe uploaded into the directory `img`, and the filename of the photo needs to be provided
+
+
+##### 4.4.2.6 Alumni
+
+The alumni are unique in the way that they can be classified into PhDs, or IphDs, or Project Students, so each of them will have different properties. So for the list of alumni, all the properties are **not compulsory**. If a property is not availabe, then don't write it, and it won't be displayed. Even if it is left empty, it won't be displayed. The properties `photo` and `name` are however compulsory. Other than that the rest of the things are similar.
+
+**Available Properties:**
+- name *[compulsory]*
+- position *[optional]*
+- current_position *[optional]*
+- duration *[optional]*
+- topic *[optional]*
+- profile *[optional]*
+- email *[optional]*
+- contact *[optional]*
+- photo *[compulsory]*
+
+A list of alumni might look like this **(Notice how each of them have difefrent properties)**:
+
+```javascript
+let alumni=[
+{
+    name: "Nikita Madhukar",
+    position: "5th year Project, IISER-Kolkata",
+    topic: "Sensing of anions using Ln3+ doped nanocrystals",
+    photo: "nikkita.jpg"
+},
+{
+    name: "Aswanth V P",
+    position: "5th year Project, IISER-Kolkata",
+    topic: "Synthesis of hetero-junction nano-composites for catalysis",
+    email: "aswanthpurameri@gmail.com",
+    contact: "08170896672",
+    photo: "aswanth-2.jpeg"
+},
+{
+    name: "Dr. Tuhin Samanta",
+    current_position: "Postdoctoral Fellow, KIT, Germany",
+    duration: "(Jan, 2013- March, 2017)",
+    topic: "Sensitization of lanthanide ions luminescence and it's applications",
+    email: " tuhinchem.164@gmail.com",
+    contact: "8927297120",
+    photo: "tuhin3.jpeg"
+},
+{
+    name: "Akash Verma",
+    position: "",
+    current_position: "",
+    duration: "",
+    topic: "Synthesis of Ln3+ doped NaYF4 Hydrogel Nanocomposites",
+    profile: "",
+    email: "verma.akash2111@gmail.com",
+    contact: "8017482474",
+    photo: "4286068.jpg"
+}
+]
+```
+
+- To change any detail, change whatever is inside the `""` double quotes.
+- To add a new member, put all of the properties of the student inside `{}` braces **(Properties can be skipped if details are not available, or left empty if details might be made available later)**, and put it insisde the enclosing `[]` square brackets, separated from the other students by a comma.
+- The photo needs tobe uploaded into the directory `img`, and the filename of the photo needs to be provided
+- New properties cannot be made up. All the properties that can be used are provided in the list at the beginning of this subsection.
+
+### 4.5 Gallery Page
+
+The gallery page is generated dynamically, and not much editing needs to be done to update the gallery. Everythting related to the gallery is present in the directory `gallery` and this section will only deal with that directory.
+
+The gallery page is divided into sections like `A Glimpse of Our Lab` , `Lab Fun` , etc. If you are familiar with the directory structure, you will notice that each of these sections is present as a folder inside the `gallery` directory. The gallery page detects what folders are present inside the `gallery` directory and makes sections out of it, displaying all the photos present inside the folders in the corresponding sections.
+
+**The folders are numbered, and they represent the order in which they appear on the gallery page**
+**The name of the folder becomes the heading of the section, after removing the preceding number**
+
+ So `1 A Glimpse of Our Lab` will become the first section on the gallery page and the heading of the section will be `A Glimpse of Our lab`. All the photos inside `1 A Glimpse of Our Lab` will be displayed inside this section.
+
+#### Slideshows
+
+ Any section can be made into a slideshow. To make a section into a slideshow, open `a.json` inside the directory `gallery`. The file looks like this:
+
+ ```javascript
+    slideshow='[0,0,0,1]'
+ ```
+`0` stands for not a slideshow (i.e. a grid of photos) and `1` stands for a slideshow of photos. So this file basically means that the first three sections are not slideshows and the fourth section is a slideshow. To change any other section from a grid to a slideshow, change the number at its corresponding position from `0` to `1`. e.g. - To make the second section into a slideshow, change the second number in a.json from `0` to `1` like: `[0,1,0,1]`
+
+
+
+#### To add new images
+
+ To add an image to a section of the gallery, just upload the image into ts corresponding folder. e.g - To add an image to the section `Lab Fun`, upload the image to `3 Lab Fun` and it will automatically appear on the Gallery Page.
+
+#### To remove an image
+
+To remove an image, just delete the image from the folder it is present in, and it wll disappear from the gallery page. e.g. - To remove a photo from the section `Lab Visitors` just delete the photo from `4 Lab Visitors` and it will automatically be removed from the Gallery page
+
+#### To make a new section
+
+To make a new section, just make a new folder inside `gallery`, numbering it according to its position, and put all the images for this section inside this folder. The section will automatically be added to the Gallery page.
+
+**e.g. -** For a new section called `New Section` which will be the third section:
+1. Make a folder `3 New Section` inside `gallery`
+2. Put all the photos for this section inside this folder
+3. Rename the previously third section folder from `3 Lab Fun` to `4 Lab Fun`, the previously fourth section from `4 Lab Visitors` to `5 Lab Visitors` and so on
+4. Edit a.json to indicate which section you want to become a slideshow. For instance if this section is not a slideshow, then `a.json` becomes
+```javascript
+slideshow='[0,0,0,0,1]'
+```
+
+
+### 4.6 Collaborators Page
+
+The collaborators page is also written in pure markdown and the content is stored in `text.js` inside the `txt` directory. However **a specific format needs to be followed** for this page.
+
+Inside `text.js` there is a variable called `collaborators` which stores all the data of the collaborators. It looks like this:
+
+```javascript
+let collaborators = `
+-   **Name:** Prof. T. Pradeep
+
+    **Position:** Professor
+
+    **Address:** Department of Chemistry, IIT-Madras, Chennai, India.
+
+    **E mail:** pradeep@iitm.ac.in
+
+
+-   **Name:** Dr. Vivek Polshettiwar
+
+    **Position:** Associate Professor
+
+    **Address:** Department of Chemical Sciences, TIFR-Mumbai, Mumbai, India.
+
+    **E mail:** vivekpol@tifr.res.in
+
+`
+```
+
+As you can see, the whole page is made of bullet points bullets *(If you did not know this, please visit the previous section which explains how to use markdown)*. Any other valid markdown can also be used.
+**Everything needs to be within the enclosing  ` `` ` (backticks)**
+
+**The following format needs to be followed for the page to be displayed correctly:-**
+
+1. Each new collaborators details should start with a `-` hyphen, followed by **1 space** then the word `Name:` written in bold, i.e. enclosed in two `**` asterisks (i.e `**Name:**`) Then the name of the collaborator.
+2. One empty line needs to be left after each detail
+3. Each line containing a detail after the first detail (name) must start with a **space**
+4. The name of the detail (i.e `Position` or `Address` or `Email`) must be bold, just like the name **(See the Markup Tutorial section if you don't know how to make text bold)**
+5. The detail itself (i.e `Associate Professor` or `pradeep@iitm.ac.in`) does not need to be bold
+6. There should be a gap of two lines between each collaborators details
+7. Again, Everything needs to be within the enclosing  ` `` ` (backticks)
+
+### 4.7 Contact Page
+
+The contact page does not contain too much editable content. Only the email address and the physical address can be changed. Inside `text.js` there is a variable called `email` which contains the email address and a variable called `physicaladdr` which contains the physical address. The physical address is written in markdown format.
+
+The contact section in `text.js` looks lke this:
+
+```javascript
+
+
+/*---------------------------------- Contact Page -------------------------------*/
+
+let email="mvenkatramanan@yahoo.com"
+let physicaladdr=`Indian Institute of Science Education and Research Kolkata,
+
+​Mohanpur, Nadia, West Bengal
+`
+
+```
+
+You can edit both of these variables
+
+
+Another thing that can be edited is the email address where the email from the query form will be sent to. For that you will need to go to `scripts` and open `mail.php`
+
+`mail.php` looks like this:
+
+```php
+<?php
+    $from = $_POST['email'];
+    $to = "someemail@gmail.com";
+    $subject = $_POST['name']."'s query from yourwebsite.com";
+    $message = $_POST['comments'];
+    $headers = "From:" . $_POST['email'];
+    mail($to,$subject,$message, $headers);
+?>
+
+```
+
+You can change the reciever's email by changing whatever is written after `$to = ` inside the `""` double quotes.
