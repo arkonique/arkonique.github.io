@@ -1,4 +1,4 @@
-# Hello World!
+# "Hi" - Riddhi Mandal (2018) &#x1f602;
 
 Visit my personal website - [arkonique.me/riddhimandal](https://arkonique.github.io/riddhimandal)
 
