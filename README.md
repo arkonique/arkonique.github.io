@@ -1,6 +1,6 @@
-# Riddhi Mandal
+# Hello World!
 
-Visit my personal website - [arkonique.me/riddhimandal](https://arkonique.me/riddhimandal)
+Visit my personal website - [arkonique.me/riddhimandal](https://arkonique.gihub.io/riddhimandal)
 
 Here you will find a number of softwares developed by me:
 
