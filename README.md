@@ -1,15 +1,21 @@
 # Hi
 
+#### ADD MY DISCORD BOT - https://discord.com/oauth2/authorize?client_id=777628572999352390&scope=bot
+
 Visit my personal website - [arkonique.me/riddhimandal](https://arkonique.github.io/riddhimandal)
 
 Here you will find a number of softwares developed by me:
 
-1. Easy Carousel
+1. Roast Bot
+2. Easy Carousel
 2. backprojection
 3. sac2mt5
 4. CryptoNote
 5. youtube-cli
 
+## Roast Bot
+### Roast your friends, but don't hurt them
+[Invite the bot!](https://discord.com/oauth2/authorize?client_id=777628572999352390&scope=bot)
 
 ## Easy Carousel
 ### A very minimalistic carousel plugin built in pure Javascript.
