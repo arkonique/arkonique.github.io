@@ -1,5 +1,7 @@
 # Hi
 
+# I HAVE NOT UPDATED THIS PAGE IN ALMOST A DECADE. PLEASE LOOK AT MY OTHER REPOS INSTEAD.
+
 #### ADD MY DISCORD BOT - https://discord.com/oauth2/authorize?client_id=777628572999352390&scope=bot
 
 Visit my personal website - [arkonique.me/riddhimandal](https://arkonique.github.io/riddhimandal)
